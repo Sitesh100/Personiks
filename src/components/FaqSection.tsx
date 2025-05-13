@@ -1,34 +1,40 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   {
-    question: "How long is the recovery time for these procedures?",
-    answer: "Recovery time varies by procedure but typically ranges from 1-2 weeks for most treatments. Our specialists will provide personalized recovery guidelines during your consultation."
+    question: 'How long is the recovery time for these procedures?',
+    answer:
+      'Recovery time varies by procedure but typically ranges from 1-2 weeks for most treatments. Our specialists will provide personalized recovery guidelines during your consultation.',
   },
   {
-    question: "Can I book an appointment online?",
-    answer: "Yes! You can easily book appointments through our website or by calling our clinic directly. We offer flexible scheduling options to accommodate your needs."
+    question: 'Can I book an appointment online?',
+    answer:
+      'Yes! You can easily book appointments through our website or by calling our clinic directly. We offer flexible scheduling options to accommodate your needs.',
   },
   {
-    question: "Are the treatments safe?",
-    answer: "All our treatments are performed by certified professionals using FDA-approved techniques and equipment. Safety is our top priority in every procedure."
+    question: 'Are the treatments safe?',
+    answer:
+      'All our treatments are performed by certified professionals using FDA-approved techniques and equipment. Safety is our top priority in every procedure.',
   },
   {
-    question: "What treatments does Personiks offer?",
-    answer: "We specialize in cosmetic and medical treatments including hair restoration, laser procedures, skin rejuvenation, and body contouring. Visit our services page for a complete list."
+    question: 'What treatments does Personiks offer?',
+    answer:
+      'We specialize in cosmetic and medical treatments including hair restoration, laser procedures, skin rejuvenation, and body contouring. Visit our services page for a complete list.',
   },
   {
-    question: "Where is Personiks located?",
-    answer: "Our clinic is conveniently located in the heart of the city at 123 Wellness Avenue. Free parking and accessible public transport options are available."
+    question: 'Where is Personiks located?',
+    answer:
+      'Our clinic is conveniently located in the heart of the city at 123 Wellness Avenue. Free parking and accessible public transport options are available.',
   },
   {
-    question: "Is consultation required before any procedure?",
-    answer: "Yes, a consultation is mandatory for all procedures. This allows us to assess your needs, explain the process, and create a customized treatment plan."
-  }
+    question: 'Is consultation required before any procedure?',
+    answer:
+      'Yes, a consultation is mandatory for all procedures. This allows us to assess your needs, explain the process, and create a customized treatment plan.',
+  },
 ];
 
 const FaqSection = () => {
@@ -41,7 +47,7 @@ const FaqSection = () => {
   return (
     <section className="bg-[#FDF3EB] w-full py-16 px-6 md:px-[60px] text-black">
       <div className="max-w-[1440px] mx-auto">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -50,8 +56,8 @@ const FaqSection = () => {
         >
           Frequently Asked Questions
         </motion.h2>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -66,7 +72,7 @@ const FaqSection = () => {
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className="border-b border-[#333] last:border-none overflow-hidden"
             >
-              <motion.div 
+              <motion.div
                 className="flex items-center justify-between py-4 cursor-pointer"
                 onClick={() => toggle(index)}
                 // whileHover={{ backgroundColor: "#2a2a2a" }}
@@ -86,9 +92,9 @@ const FaqSection = () => {
                 {openIndex === index && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
+                    animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
                     <p className="text-sm md:text-base text-[#CCCCCC] pb-4 pl-2">

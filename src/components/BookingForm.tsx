@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 interface BookingFormProps {
   onSubmit: (data: {
@@ -11,10 +11,10 @@ interface BookingFormProps {
 
 const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
   const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    address: "",
-    service: "",
+    name: '',
+    phone: '',
+    address: '',
+    service: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

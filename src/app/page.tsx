@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import HeroSection from "@/components/Herosection";
-import ServicesSection from "@/components/ServicesSection";
-import TreatmentsSection from "@/components/TreatmentsSection";
-import BranchesSection from "@/components/BranchesSection";
-import FeaturedTreatments from "@/components/FeaturedTreatments";
-import WhyChoose from "@/components/WhyChoose";
-import ClientExperiences from "@/components/ClientExperiences";
-import FaqSection from "@/components/FaqSection";
-import Modal from "@/components/Modal";
-import BookingForm from "@/components/BookingForm";
-import Footer from "@/components/Footer";
+import React, { useState } from 'react';
+import HeroSection from '@/components/Herosection';
+import ServicesSection from '@/components/ServicesSection';
+import TreatmentsSection from '@/components/TreatmentsSection';
+import BranchesSection from '@/components/BranchesSection';
+import FeaturedTreatments from '@/components/FeaturedTreatments';
+import WhyChoose from '@/components/WhyChoose';
+import ClientExperiences from '@/components/ClientExperiences';
+import FaqSection from '@/components/FaqSection';
+import Modal from '@/components/Modal';
+import BookingForm from '@/components/BookingForm';
+import Footer from '@/components/Footer';
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
 

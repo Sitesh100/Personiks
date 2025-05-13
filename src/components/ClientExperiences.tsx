@@ -1,39 +1,39 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import TestimonialCard from "@/components/TestimonialCard";
+import { useState, useEffect, useRef, useCallback } from 'react';
+import TestimonialCard from '@/components/TestimonialCard';
 
 const testimonials = [
   {
-    name: "Nirvair Shah",
-    service: "Hair transplant",
-    image: "/assets/client1.png",
+    name: 'Nirvair Shah',
+    service: 'Hair transplant',
+    image: '/assets/client1.png',
     quote:
-      "The entire team made me feel comfortable and confident. The results exceeded my expectations!",
+      'The entire team made me feel comfortable and confident. The results exceeded my expectations!',
     stars: 4,
   },
   {
-    name: "Nia Kapoor",
-    service: "Laser hair removal",
-    image: "/assets/client2.png",
+    name: 'Nia Kapoor',
+    service: 'Laser hair removal',
+    image: '/assets/client2.png',
     quote:
-      "No more waxing hassles-my skin feels smooth and hair-free every day!",
+      'No more waxing hassles-my skin feels smooth and hair-free every day!',
     stars: 3,
   },
   {
-    name: "Ayesha Singh",
-    service: "Rhinoplasty",
-    image: "/assets/client3.png",
+    name: 'Ayesha Singh',
+    service: 'Rhinoplasty',
+    image: '/assets/client3.png',
     quote:
-      "My nose looks natural and balanced. I feel so much more confident now.",
+      'My nose looks natural and balanced. I feel so much more confident now.',
     stars: 5,
   },
   {
-    name: "Aryav Kaur",
-    service: "Fat Grafting",
-    image: "/assets/client4.png",
+    name: 'Aryav Kaur',
+    service: 'Fat Grafting',
+    image: '/assets/client4.png',
     quote:
-      "The results look so natural. My face feels fresher and more youthful.",
+      'The results look so natural. My face feels fresher and more youthful.',
     stars: 4,
   },
 ];
@@ -49,8 +49,8 @@ export default function ClientExperiences() {
   useEffect(() => {
     setWindowWidth(window.innerWidth);
     const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const getCardsToShow = useCallback(() => {
@@ -113,15 +113,15 @@ export default function ClientExperiences() {
     };
 
     if (slider) {
-      slider.addEventListener("mouseenter", pauseAutoPlay);
-      slider.addEventListener("mouseleave", resumeAutoPlay);
+      slider.addEventListener('mouseenter', pauseAutoPlay);
+      slider.addEventListener('mouseleave', resumeAutoPlay);
     }
 
     return () => {
       clearInterval(interval);
       if (slider) {
-        slider.removeEventListener("mouseenter", pauseAutoPlay);
-        slider.removeEventListener("mouseleave", resumeAutoPlay);
+        slider.removeEventListener('mouseenter', pauseAutoPlay);
+        slider.removeEventListener('mouseleave', resumeAutoPlay);
       }
     };
   }, [nextSlide]);
@@ -191,7 +191,7 @@ export default function ClientExperiences() {
               <div
                 key={index}
                 className="flex-shrink-0"
-                style={{ width: `${cardWidth}px`, height: "256px" }}
+                style={{ width: `${cardWidth}px`, height: '256px' }}
               >
                 <TestimonialCard {...testimonial} />
               </div>
@@ -207,8 +207,8 @@ export default function ClientExperiences() {
               onClick={() => goToSlide(index)}
               className={`transition-all duration-300 ${
                 currentSlide === index
-                  ? "w-8 h-2 bg-white rounded-full"
-                  : "w-2 h-2 bg-white/40 rounded-full"
+                  ? 'w-8 h-2 bg-white rounded-full'
+                  : 'w-2 h-2 bg-white/40 rounded-full'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

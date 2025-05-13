@@ -1,12 +1,12 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Treatments", href: "/treatments" },
-  { name: "Instant Procedures", href: "/instant-procedures" },
-  { name: "Testimonials", href: "/testimonials" },
-  { name: "About Us", href: "/about" },
+  { name: 'Home', href: '/' },
+  { name: 'Treatments', href: '/treatments' },
+  { name: 'Instant Procedures', href: '/instant-procedures' },
+  { name: 'Testimonials', href: '/testimonials' },
+  { name: 'About Us', href: '/about' },
 ];
 
 export default function Header() {
@@ -14,7 +14,7 @@ export default function Header() {
     <header className="w-full flex justify-center pt-8">
       <nav
         className="flex items-center justify-between w-[1308px] h-[100px] bg-cream rounded-4xl px-[40px] shadow"
-        style={{ maxWidth: "98vw" }}
+        style={{ maxWidth: '98vw' }}
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">

@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const services = [
-  { title: "Liposuction", img: "/assets/Liposuction.png" },
-  { title: "Rhinoplasty", img: "/assets/Rhinoplasty.png" },
-  { title: "Gynecomastia", img: "/assets/Gynecomastia.png" },
-  { title: "Fat Grafting", img: "/assets/FatGrafting.png" },
-  { title: "Tummy tuck & Liposuction", img: "/assets/Tummy.png" },
+  { title: 'Liposuction', img: '/assets/Liposuction.png' },
+  { title: 'Rhinoplasty', img: '/assets/Rhinoplasty.png' },
+  { title: 'Gynecomastia', img: '/assets/Gynecomastia.png' },
+  { title: 'Fat Grafting', img: '/assets/FatGrafting.png' },
+  { title: 'Tummy tuck & Liposuction', img: '/assets/Tummy.png' },
 ];
 
 const ServicesSection = () => {

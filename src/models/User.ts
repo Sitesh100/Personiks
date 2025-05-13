@@ -1,5 +1,5 @@
-import mongoose, { Schema } from "mongoose";
-import { Usertype } from "@/types/User";
+import mongoose, { Schema } from 'mongoose';
+import { Usertype } from '@/types/User';
 
 const userSchema = new Schema<Usertype>({
   fullName: { type: String, required: true, trim: true },
@@ -16,4 +16,4 @@ const userSchema = new Schema<Usertype>({
 });
 
 export default mongoose.models.User ||
-  mongoose.model<Usertype>("User", userSchema);
+  mongoose.model<Usertype>('User', userSchema);

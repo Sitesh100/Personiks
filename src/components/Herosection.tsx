@@ -143,16 +143,15 @@
 
 // export default HeroSection;
 
+'use client';
 
-"use client";
-
-import Image from "next/image";
-import { motion } from "framer-motion";
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 // import background from "../../public/image/Video.png";
 // import Header from "@/components/ui/Header";
 // import bot from "../../public/image/bot.png";
 // import call from "../../public/image/call.png";
-// import whatsapp from "../../public/image/whatsapp.png"; 
+// import whatsapp from "../../public/image/whatsapp.png";
 // import chat from "../../public/image/chat.png";
 // import Link from "next/link";
 
@@ -213,11 +212,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookNow }) => {
         </div>
 
         <p className="mt-2 text-lg font-outfit font-normal text-white">
-          Access your account –{" "}
+          Access your account –{' '}
           <span className="underline cursor-pointer hover:text-[#E3B63A] transition-colors">
             Login
-          </span>{" "}
-          or{" "}
+          </span>{' '}
+          or{' '}
           <span className="underline cursor-pointer hover:text-[#E3B63A] transition-colors">
             Register
           </span>

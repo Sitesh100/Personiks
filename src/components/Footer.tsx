@@ -1,5 +1,12 @@
-import Link from "next/link"
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react"
+import Link from 'next/link';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Twitter,
+} from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -9,7 +16,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Personiks</h3>
             <p className="text-gray mb-4">
-              Leading medical and cosmetic clinic providing exceptional care and treatments.
+              Leading medical and cosmetic clinic providing exceptional care and
+              treatments.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray hover:text-gold-light">
@@ -33,22 +41,34 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/treatments" className="text-gray hover:text-gold-light">
+                <Link
+                  href="/treatments"
+                  className="text-gray hover:text-gold-light"
+                >
                   Our Treatments
                 </Link>
               </li>
               <li>
-                <Link href="/doctors" className="text-gray hover:text-gold-light">
+                <Link
+                  href="/doctors"
+                  className="text-gray hover:text-gold-light"
+                >
                   Our Doctors
                 </Link>
               </li>
               <li>
-                <Link href="/branches" className="text-gray hover:text-gold-light">
+                <Link
+                  href="/branches"
+                  className="text-gray hover:text-gold-light"
+                >
                   Our Branches
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray hover:text-gold-light">
+                <Link
+                  href="/contact"
+                  className="text-gray hover:text-gold-light"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -68,16 +88,20 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-gold" />
-                <span>123 Medical Center Dr, Suite 100, New York, NY 10001</span>
+                <span>
+                  123 Medical Center Dr, Suite 100, New York, NY 10001
+                </span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray pt-6 text-center text-gray text-sm">
-          <p>&copy; {new Date().getFullYear()} Personiks. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Personiks. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

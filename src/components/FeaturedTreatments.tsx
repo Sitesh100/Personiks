@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 const treatments = [
   {
-    title: "Liposuction",
+    title: 'Liposuction',
     description:
       "Are you struggling to lose stubborn fat that won't budge no matter how much you diet or exercise?",
-    img: "/assets/featuretreatment1.png",
+    img: '/assets/featuretreatment1.png',
   },
   {
-    title: "Rhinoplasty",
+    title: 'Rhinoplasty',
     description:
-      "Discover a refined look and easier breathing through Rhinoplasty.",
-    img: "/assets/featuretreatment2.png",
+      'Discover a refined look and easier breathing through Rhinoplasty.',
+    img: '/assets/featuretreatment2.png',
   },
 ];
 

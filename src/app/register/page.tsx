@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useState, ChangeEvent } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import { z } from "zod";
-import { registerSchema } from "@/schema/userSchema";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useState, ChangeEvent } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { z } from 'zod';
+import { registerSchema } from '@/schema/userSchema';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 type FormErrors = {
   fullName?: string;
@@ -20,10 +20,10 @@ type FormErrors = {
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    password: "",
+    fullName: '',
+    email: '',
+    phone: '',
+    password: '',
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,7 +43,7 @@ export default function RegisterPage() {
         setErrors(fieldErrors);
         return false;
       }
-      setErrors({ general: "Validation failed" });
+      setErrors({ general: 'Validation failed' });
       return false;
     }
   };
@@ -67,15 +67,15 @@ export default function RegisterPage() {
     }
 
     try {
-      const res = await fetch("/api/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
       const data = await res.json();
       if (!res.ok) {
-        setErrors({ general: data.error || "Registration failed" });
+        setErrors({ general: data.error || 'Registration failed' });
         if (data.details) {
           // Handle specific validation errors from server
           const serverErrors: FormErrors = {};
@@ -86,11 +86,11 @@ export default function RegisterPage() {
           setErrors(serverErrors);
         }
       } else {
-        router.push("/login");
+        router.push('/login');
       }
     } catch (error) {
-      console.error("Registration error:", error);
-      setErrors({ general: "Network error, please try again" });
+      console.error('Registration error:', error);
+      setErrors({ general: 'Network error, please try again' });
     } finally {
       setIsSubmitting(false);
     }
@@ -102,20 +102,25 @@ export default function RegisterPage() {
         <div className="pb-2 px-8 font-medium border-b-2 border-[#D6A419] text-black">
           Register
         </div>
-        <Link href="/login" className="pb-2 px-8 text-[#D6A419] hover:text-[#B58A14]">
+        <Link
+          href="/login"
+          className="pb-2 px-8 text-[#D6A419] hover:text-[#B58A14]"
+        >
           Login
         </Link>
       </div>
-      
+
       {errors.general && (
         <Alert variant="destructive" className="mb-4">
           <AlertDescription>{errors.general}</AlertDescription>
         </Alert>
       )}
-      
+
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
-          <Label htmlFor="fullName" className="block mb-2 text-gray-700">Full name</Label>
+          <Label htmlFor="fullName" className="block mb-2 text-gray-700">
+            Full name
+          </Label>
           <Input
             id="fullName"
             name="fullName"
@@ -125,7 +130,7 @@ export default function RegisterPage() {
             placeholder="Enter your first name here..."
             required
             aria-invalid={!!errors.fullName}
-            aria-describedby={errors.fullName ? "fullName-error" : undefined}
+            aria-describedby={errors.fullName ? 'fullName-error' : undefined}
             className="w-full p-4 border rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#D6A419]"
           />
           {errors.fullName && (
@@ -134,9 +139,11 @@ export default function RegisterPage() {
             </p>
           )}
         </div>
-        
+
         <div className="mb-6">
-          <Label htmlFor="email" className="block mb-2 text-gray-700">E-mail Id</Label>
+          <Label htmlFor="email" className="block mb-2 text-gray-700">
+            E-mail Id
+          </Label>
           <Input
             id="email"
             name="email"
@@ -146,7 +153,7 @@ export default function RegisterPage() {
             placeholder="Enter your e-mail id here..."
             required
             aria-invalid={!!errors.email}
-            aria-describedby={errors.email ? "email-error" : undefined}
+            aria-describedby={errors.email ? 'email-error' : undefined}
             className="w-full p-4 border rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#D6A419]"
           />
           {errors.email && (
@@ -155,9 +162,11 @@ export default function RegisterPage() {
             </p>
           )}
         </div>
-        
+
         <div className="mb-6">
-          <Label htmlFor="phone" className="block mb-2 text-gray-700">Phone number</Label>
+          <Label htmlFor="phone" className="block mb-2 text-gray-700">
+            Phone number
+          </Label>
           <Input
             id="phone"
             name="phone"
@@ -166,7 +175,7 @@ export default function RegisterPage() {
             onChange={handleChange}
             placeholder="Enter your number here..."
             aria-invalid={!!errors.phone}
-            aria-describedby={errors.phone ? "phone-error" : undefined}
+            aria-describedby={errors.phone ? 'phone-error' : undefined}
             className="w-full p-4 border rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#D6A419]"
           />
           {errors.phone && (
@@ -175,9 +184,11 @@ export default function RegisterPage() {
             </p>
           )}
         </div>
-        
+
         <div className="mb-8">
-          <Label htmlFor="password" className="block mb-2 text-gray-700">Password</Label>
+          <Label htmlFor="password" className="block mb-2 text-gray-700">
+            Password
+          </Label>
           <Input
             id="password"
             name="password"
@@ -187,7 +198,7 @@ export default function RegisterPage() {
             placeholder="Enter your new password here..."
             required
             aria-invalid={!!errors.password}
-            aria-describedby={errors.password ? "password-error" : undefined}
+            aria-describedby={errors.password ? 'password-error' : undefined}
             className="w-full p-4 border rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#D6A419]"
           />
           {errors.password && (
@@ -196,18 +207,18 @@ export default function RegisterPage() {
             </p>
           )}
         </div>
-        
-        <Button 
-          type="submit" 
-          className="w-full p-4 bg-[#D6A419] hover:bg-[#B58A14] text-white rounded-md font-medium" 
+
+        <Button
+          type="submit"
+          className="w-full p-4 bg-[#D6A419] hover:bg-[#B58A14] text-white rounded-md font-medium"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Registering..." : "Register"}
+          {isSubmitting ? 'Registering...' : 'Register'}
         </Button>
       </form>
-      
+
       <p className="mt-6 text-center text-gray-600">
-        Already have an account?{" "}
+        Already have an account?{' '}
         <Link href="/login" className="text-[#D6A419] hover:underline">
           Login here
         </Link>

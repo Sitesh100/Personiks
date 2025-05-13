@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { useState, ChangeEvent } from "react";
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import { z } from "zod";
-import { loginSchema } from "@/schema/userSchema";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useState, ChangeEvent } from 'react';
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { z } from 'zod';
+import { loginSchema } from '@/schema/userSchema';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 type FormErrors = {
   email?: string;
@@ -19,8 +19,8 @@ type FormErrors = {
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,7 +40,7 @@ export default function LoginPage() {
         setErrors(fieldErrors);
         return false;
       }
-      setErrors({ general: "Validation failed" });
+      setErrors({ general: 'Validation failed' });
       return false;
     }
   };
@@ -62,20 +62,20 @@ export default function LoginPage() {
     }
 
     try {
-      const result = await signIn("credentials", {
+      const result = await signIn('credentials', {
         email: formData.email,
         password: formData.password,
         redirect: false,
       });
 
       if (result?.error) {
-        setErrors({ general: "Invalid email or password" });
+        setErrors({ general: 'Invalid email or password' });
       } else {
-        router.push("/");
+        router.push('/');
       }
     } catch (error) {
-      console.error("Login error:", error);
-      setErrors({ general: "Network error, please try again" });
+      console.error('Login error:', error);
+      setErrors({ general: 'Network error, please try again' });
     } finally {
       setIsSubmitting(false);
     }
@@ -115,7 +115,7 @@ export default function LoginPage() {
             placeholder="Enter your e-mail id here..."
             required
             aria-invalid={!!errors.email}
-            aria-describedby={errors.email ? "email-error" : undefined}
+            aria-describedby={errors.email ? 'email-error' : undefined}
             className="w-full p-4 border rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#D6A419]"
           />
           {errors.email && (
@@ -138,7 +138,7 @@ export default function LoginPage() {
             placeholder="Enter your password here..."
             required
             aria-invalid={!!errors.password}
-            aria-describedby={errors.password ? "password-error" : undefined}
+            aria-describedby={errors.password ? 'password-error' : undefined}
             className="w-full p-4 border rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#D6A419]"
           />
           {errors.password && (
@@ -153,12 +153,12 @@ export default function LoginPage() {
           className="w-full p-4 bg-[#D6A419] hover:bg-[#B58A14] text-white rounded-md font-medium"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Logging in..." : "Login"}
+          {isSubmitting ? 'Logging in...' : 'Login'}
         </Button>
       </form>
 
       <p className="mt-6 text-center text-gray-600">
-        Don’t have an account?{" "}
+        Don’t have an account?{' '}
         <Link href="/register" className="text-[#D6A419] hover:underline">
           Register here
         </Link>

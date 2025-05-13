@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Modified nav items to use section IDs instead of different pages
 const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "Treatments", href: "#treatments" },
-  { name: "Instant Procedures", href: "#featured-treatments" },
-  { name: "Testimonials", href: "#client-experiences" },
-  { name: "About Us", href: "#why-choose" },
+  { name: 'Home', href: '#hero' },
+  { name: 'Treatments', href: '#treatments' },
+  { name: 'Instant Procedures', href: '#featured-treatments' },
+  { name: 'Testimonials', href: '#client-experiences' },
+  { name: 'About Us', href: '#why-choose' },
 ];
 
 export default function Header() {
@@ -24,8 +24,8 @@ export default function Header() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Smooth scroll function
@@ -52,7 +52,7 @@ export default function Header() {
       // Scroll smoothly to the target
       window.scrollTo({
         top: targetPosition,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
@@ -64,14 +64,14 @@ export default function Header() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className={`flex items-center justify-between w-[95%] max-w-[1308px] h-[90px] bg-[#FDF3EB] rounded-[40px] shadow-md px-6 md:px-10 relative z-50 transition-all duration-300 ${
-          isScrolled ? "shadow-lg bg-opacity-95" : ""
+          isScrolled ? 'shadow-lg bg-opacity-95' : ''
         }`}
       >
         {/* Logo */}
         <a
           href="#hero"
           className="flex flex-col items-center gap-1"
-          onClick={(e) => handleSmoothScroll(e, "#hero")}
+          onClick={(e) => handleSmoothScroll(e, '#hero')}
         >
           {!logoError ? (
             <Image
@@ -108,7 +108,7 @@ export default function Header() {
         {/* Contact Button (Desktop) */}
         <a
           href="#contact"
-          onClick={(e) => handleSmoothScroll(e, "#contact")}
+          onClick={(e) => handleSmoothScroll(e, '#contact')}
           className="hidden lg:flex items-center justify-center h-12 px-8 rounded-full bg-[#E3B63A] text-black font-medium text-base hover:shadow-lg transition-all"
         >
           Contact Us
@@ -123,17 +123,17 @@ export default function Header() {
           <div className="relative w-8 h-6 flex flex-col justify-between">
             <span
               className={`w-full h-1 bg-[#BFA14A] rounded-full transition-all ${
-                isMenuOpen ? "rotate-45 translate-y-2.5" : ""
+                isMenuOpen ? 'rotate-45 translate-y-2.5' : ''
               }`}
             ></span>
             <span
               className={`w-full h-1 bg-[#BFA14A] rounded-full transition-all ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
+                isMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}
             ></span>
             <span
               className={`w-full h-1 bg-[#BFA14A] rounded-full transition-all ${
-                isMenuOpen ? "-rotate-45 -translate-y-2.5" : ""
+                isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''
               }`}
             ></span>
           </div>
@@ -164,7 +164,7 @@ export default function Header() {
               <a
                 href="#contact"
                 className="mt-4 flex items-center justify-center h-12 px-8 rounded-full bg-[#E3B63A] text-black font-medium text-base hover:shadow-lg transition-all"
-                onClick={(e) => handleSmoothScroll(e, "#contact")}
+                onClick={(e) => handleSmoothScroll(e, '#contact')}
               >
                 Contact Us
               </a>

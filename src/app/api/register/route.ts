@@ -1,10 +1,10 @@
-import { NextResponse } from "next/server";
-import { z } from "zod";
-import connectDB from "@/lib/db";
-import User from "@/models/User";
-import { hashPassword } from "@/lib/utils";
-import { registerSchema } from "@/schema/userSchema";
-import { Usertype } from "@/types/User";
+import { NextResponse } from 'next/server';
+import { z } from 'zod';
+import connectDB from '@/lib/db';
+import User from '@/models/User';
+import { hashPassword } from '@/lib/utils';
+import { registerSchema } from '@/schema/userSchema';
+import { Usertype } from '@/types/User';
 
 export async function POST(request: Request) {
   try {
@@ -16,12 +16,12 @@ export async function POST(request: Request) {
     } catch (validationError) {
       if (validationError instanceof z.ZodError) {
         return NextResponse.json(
-          { error: "Validation failed", details: validationError.errors },
+          { error: 'Validation failed', details: validationError.errors },
           { status: 400 }
         );
       }
       return NextResponse.json(
-        { error: "Invalid request body" },
+        { error: 'Invalid request body' },
         { status: 400 }
       );
     }
@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     const existingUser = await User.findOne({ email }).lean<Usertype>();
     if (existingUser) {
       return NextResponse.json(
-        { error: "Email already exists" },
+        { error: 'Email already exists' },
         { status: 409 }
       );
     }
@@ -55,15 +55,15 @@ export async function POST(request: Request) {
     // Return success response
     return NextResponse.json(
       {
-        message: "User registered successfully",
+        message: 'User registered successfully',
         userId: user._id.toString(),
       },
       { status: 201 }
     );
   } catch (error) {
-    console.error("Registration error:", error);
+    console.error('Registration error:', error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: 'Internal server error' },
       { status: 500 }
     );
   }

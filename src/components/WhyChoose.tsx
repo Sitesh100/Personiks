@@ -1,20 +1,20 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const featureCards = [
   {
-    title: "Trusted Expertise",
-    description: "Performed by experienced and board-certified surgeons",
-    icon: "/assets/trust.png",
+    title: 'Trusted Expertise',
+    description: 'Performed by experienced and board-certified surgeons',
+    icon: '/assets/trust.png',
   },
   {
-    title: "End-to-End Care",
-    description: "Support before, during, and after your procedure",
-    icon: "/assets/HeartHand.png",
+    title: 'End-to-End Care',
+    description: 'Support before, during, and after your procedure',
+    icon: '/assets/HeartHand.png',
   },
   {
-    title: "High Patient Satisfaction",
-    description: "Consistently rated highly by real patients",
-    icon: "/assets/patient.png",
+    title: 'High Patient Satisfaction',
+    description: 'Consistently rated highly by real patients',
+    icon: '/assets/patient.png',
   },
 ];
 

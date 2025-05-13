@@ -1,17 +1,17 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const branches = [
   {
-    name: "Personiks Manikonda",
-    img: "/assets/branch1.png",
+    name: 'Personiks Manikonda',
+    img: '/assets/branch1.png',
   },
   {
-    name: "Personiks Nallagandla",
-    img: "/assets/branch2.png",
+    name: 'Personiks Nallagandla',
+    img: '/assets/branch2.png',
   },
   {
-    name: "Personiks Punjagutta",
-    img: "/assets/branch3.png",
+    name: 'Personiks Punjagutta',
+    img: '/assets/branch3.png',
   },
 ];
 

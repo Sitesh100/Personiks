@@ -1,17 +1,17 @@
-import type { AuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
-import connectDB from "@/lib/db";
-import User from "@/models/User";
-import { verifyPassword } from "@/lib/utils";
-import { Usertype } from "@/types/User";
+import type { AuthOptions } from 'next-auth';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import connectDB from '@/lib/db';
+import User from '@/models/User';
+import { verifyPassword } from '@/lib/utils';
+import { Usertype } from '@/types/User';
 
 export const authConfig: AuthOptions = {
   providers: [
     CredentialsProvider({
-      name: "Credentials",
+      name: 'Credentials',
       credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" },
+        email: { label: 'Email', type: 'email' },
+        password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
@@ -43,15 +43,15 @@ export const authConfig: AuthOptions = {
             phone: user.phone ?? null,
           };
         } catch (error) {
-          console.error("Auth error:", error);
+          console.error('Auth error:', error);
           return null;
         }
       },
     }),
   ],
   pages: {
-    signIn: "/login",
-    error: "/auth/error",
+    signIn: '/login',
+    error: '/auth/error',
   },
   callbacks: {
     async jwt({ token, user }) {
@@ -74,7 +74,7 @@ export const authConfig: AuthOptions = {
     },
   },
   session: {
-    strategy: "jwt",
+    strategy: 'jwt',
     maxAge: 24 * 60 * 60, // 1 day
   },
   secret: process.env.NEXTAUTH_SECRET,
