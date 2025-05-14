@@ -50,7 +50,6 @@ const ArmLiposuction = () => {
 
   const beforeAfterImage =
     'https://personiks.com/wp-content/uploads/2024/02/Arm-Liposuction-Website-Icon-Before-and-After-2.jpg';
-
   return (
     <div>
       <DropDownPage
