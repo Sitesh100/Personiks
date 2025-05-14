@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 interface BookingFormProps {
   onSubmit: (data: {
     name: string;
     phone: string;
     address: string;
-    service: string;
+    mainService: string;
+    subService: string;
   }) => void;
 }
 
@@ -14,11 +22,83 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
     name: '',
     phone: '',
     address: '',
-    service: '',
+    mainService: '',
+    subService: '',
   });
+
+  const [subServices, setSubServices] = useState<string[]>([]);
+
+  // Service categories and their sub-services
+  const serviceOptions = {
+    Face: [
+      'Double Chin Removal',
+      'Buccal Fat Removal',
+      'Dimple Creation',
+      'Chin Augmentation',
+      'Eyelid / Under Eye Bags Correction',
+      'Nose Shaping (Rhinoplasty)',
+      'Ear Shaping & Ear Lobe Repair',
+      'Lip Correction',
+      'Face Fat Grafting',
+    ],
+    Body: [
+      'Liposuction at Personiks',
+      'Axillary Breast Removal',
+      'Gynecomastia / Man Boobs / Chest Fat Removal',
+      'Arm Liposuction',
+      'Tummy Liposuction & Tuck',
+      'Mommy Makeover',
+      'Thigh or Calf Liposuction',
+      'HD Liposuction',
+      'Butt & Hips Liposuction or Butt Lift',
+      'Vaginoplasty & Labiaplasty',
+    ],
+    'Instant Procedures': [
+      'Lipoma Removal',
+      'Mole Removal',
+      'Corn Removal',
+      'Warts Removal',
+      'Acne Scar Treatment',
+      'Scar removal for past injury',
+      'Genital & Anal Warts',
+      'Ear Lobe Repair',
+    ],
+    Skin: [
+      'Face Fat Grafting',
+      'Unwanted Hair',
+      'Facial Rejuvination',
+      'Acne Scars Removal',
+      'Laser Skin Pigmentation',
+      'Laser Skin Toning',
+      'Contour Thread Lift',
+      'Chemical Peel',
+      'Derma Rollor in Hyderabad',
+    ],
+    Hair: ['Hair Transplant', 'Hair Loss Treatment'],
+    'Reconstructive Surgeries': ['Burns', 'Pilonidal Sinus Treatment'],
+    Obesity: ['Surgerical', 'Non Surgerical'],
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleMainServiceChange = (value: string) => {
+    setForm({
+      ...form,
+      mainService: value,
+      subService: '', // Reset sub-service when main service changes
+    });
+
+    // Update sub-services based on selected main service
+    setSubServices(serviceOptions[value as keyof typeof serviceOptions] || []);
+  };
+
+  const handleSubServiceChange = (value: string) => {
+    setForm({
+      ...form,
+      subService: value,
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -64,17 +144,54 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
           className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent"
         />
       </div>
-      <div className="mb-8">
+      <div className="mb-6">
         <label className="block font-semibold text-lg mb-2">Service</label>
-        <input
-          type="text"
-          name="service"
-          placeholder="Enter the service you are looking for here..."
-          value={form.service}
-          onChange={handleChange}
-          required
-          className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent"
-        />
+        <div className="flex gap-4">
+          {/* Main Service dropdown */}
+          <div className="flex-1">
+            <Select
+              value={form.mainService}
+              onValueChange={handleMainServiceChange}
+            >
+              <SelectTrigger className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent">
+                <SelectValue placeholder="Select service category" />
+              </SelectTrigger>
+              <SelectContent>
+                {Object.keys(serviceOptions).map((service) => (
+                  <SelectItem key={service} value={service}>
+                    {service}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* Sub Service dropdown */}
+          <div className="flex-1">
+            <Select
+              value={form.subService}
+              onValueChange={handleSubServiceChange}
+              disabled={!form.mainService}
+            >
+              <SelectTrigger className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent">
+                <SelectValue
+                  placeholder={
+                    form.mainService
+                      ? 'Select specific service'
+                      : 'Select category first'
+                  }
+                />
+              </SelectTrigger>
+              <SelectContent>
+                {subServices.map((subService) => (
+                  <SelectItem key={subService} value={subService}>
+                    {subService}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
       </div>
       <button
         type="submit"
