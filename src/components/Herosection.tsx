@@ -147,6 +147,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Header from './Header';
 // import background from "../../public/image/Video.png";
 // import Header from "@/components/ui/Header";
 // import bot from "../../public/image/bot.png";
@@ -162,6 +163,7 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({ onBookNow }) => {
   return (
     <section className="relative w-full h-screen min-h-[700px] bg-cover bg-center text-white overflow-hidden">
+      <Header />
       {/* Background Image with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
