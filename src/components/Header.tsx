@@ -28,7 +28,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="w-full flex justify-center pt-6">
+    <header className="sticky  z-50 w-full flex justify-center pt-6">
+
       <motion.nav
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
