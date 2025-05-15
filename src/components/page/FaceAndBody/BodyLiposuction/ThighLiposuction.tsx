@@ -1,4 +1,4 @@
-import DropDownPage from '@/components/DropDownPage/DropDownPage';
+import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const ThighLiposuction = () => {
