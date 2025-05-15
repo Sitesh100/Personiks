@@ -17,7 +17,7 @@ const branches = [
 
 const BranchesSection = () => {
   return (
-    <section className="bg-[#111111] text-white py-12 px-16 ">
+    <section className="bg-[#111111] text-white py-12 md:px-16 px-4 ">
       <div className="w-full ">
         {/* Title */}
         <h2 className="text-[60px] ">
@@ -29,7 +29,7 @@ const BranchesSection = () => {
         </p>
 
         {/* Branch Cards */}
-        <div className="flex gap-4 mt-8 flex-nowrap">
+        <div className="flex flex-col md:flex-row gap-4 mt-8 flex-nowrap">
           {branches.map((branch, idx) => (
             <div
               key={idx}

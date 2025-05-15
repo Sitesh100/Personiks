@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../Header';
 import Image from 'next/image';
+import Footer from '../Footer';
 
 interface FeatureCard {
   title: string;
@@ -198,6 +199,7 @@ const DropDownPage: React.FC<DropDownPageProps> = ({
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

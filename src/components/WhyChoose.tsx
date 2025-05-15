@@ -20,7 +20,7 @@ const featureCards = [
 
 const WhyChoose = () => {
   return (
-    <section className="bg-[#111111] text-white w-full px-16 py-[60px]">
+    <section className="bg-[#111111] text-white w-full md:px-16 py-[60px]">
       <div className="max-w-[1439px] mx-auto flex flex-col gap-[57px]">
         {/* Header */}
         <h2 className="text-[60px] mb-5">
@@ -28,7 +28,7 @@ const WhyChoose = () => {
         </h2>
 
         {/* Cards */}
-        <div className="flex justify-between gap-4">
+        <div className="flex flex-col md:flex-row justify-between gap-4">
           {featureCards.map((item, index) => (
             <div
               key={index}

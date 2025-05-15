@@ -15,7 +15,7 @@ const FeaturedTreatments = () => {
         </p>
 
         {/* Cards */}
-        <div className="flex gap-6 flex-wrap">
+        <div className="flex md:flex-row flex-col gap-6 flex-wrap">
           <div className="relative w-full md:w-[calc(50%-12px)] h-80 overflow-hidden rounded text-right">
             {/* Image Background */}
             <div className="absolute inset-0 w-full h-full">

@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const highlightImages = [
   '/assets/highlight1.png',
@@ -153,7 +154,7 @@ export default function Page() {
       </section>
 
       {/* 2) CREDENTIAL CARDS */}
-      <section className="bg-[#fdf6f1] py-16 px-6 lg:px-20 border">
+      <section className="bg-[#FDF3EB] py-16 px-6 lg:px-20 border">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
@@ -227,7 +228,7 @@ export default function Page() {
             <div className="relative h-full w-full flex items-end justify-center">
               {/* Yellow circle background */}
               <div
-                className="rounded-full bg-[#FFD669] absolute right-0"
+                className="rounded-full absolute right-0"
                 style={{
                   width: '100%',
                   height: '65%',
@@ -329,6 +330,7 @@ export default function Page() {
           <Image src="/assets/call.png" width={40} height={40} alt="Call Us" />
         </a>
       </div>
+      <Footer />
     </div>
   );
 }
