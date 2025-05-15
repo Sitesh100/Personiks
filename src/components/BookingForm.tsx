@@ -108,7 +108,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit} className="font-outfit">
-      <div className="mb-6">
+      <div className="mb-4">
         <label className="block font-semibold text-lg mb-2">Full name</label>
         <input
           type="text"
@@ -117,10 +117,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
           value={form.name}
           onChange={handleChange}
           required
-          className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent"
+          className="w-full p-2 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent"
         />
       </div>
-      <div className="mb-6">
+      <div className="mb-4">
         <label className="block font-semibold text-lg mb-2">Phone number</label>
         <input
           type="tel"
@@ -129,10 +129,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
           value={form.phone}
           onChange={handleChange}
           required
-          className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent"
+          className="w-full p-2 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent"
         />
       </div>
-      <div className="mb-6">
+      <div className="mb-4">
         <label className="block font-semibold text-lg mb-2">Address</label>
         <input
           type="text"
@@ -141,10 +141,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
           value={form.address}
           onChange={handleChange}
           required
-          className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent"
+          className="w-full p-2 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent"
         />
       </div>
-      <div className="mb-6">
+      <div className="mb-4">
         <label className="block font-semibold text-lg mb-2">Service</label>
         <div className="flex gap-4">
           {/* Main Service dropdown */}
@@ -153,7 +153,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
               value={form.mainService}
               onValueChange={handleMainServiceChange}
             >
-              <SelectTrigger className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent">
+              <SelectTrigger className="w-full p-5 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent">
                 <SelectValue placeholder="Select service category" />
               </SelectTrigger>
               <SelectContent>
@@ -173,7 +173,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
               onValueChange={handleSubServiceChange}
               disabled={!form.mainService}
             >
-              <SelectTrigger className="w-full p-4 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent">
+              <SelectTrigger className="w-full p-5 rounded-xl border-2 border-[#bdb0a1] text-lg bg-transparent">
                 <SelectValue
                   placeholder={
                     form.mainService
@@ -195,7 +195,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onSubmit }) => {
       </div>
       <button
         type="submit"
-        className="w-full bg-[#d4af37] text-[#181818] rounded-xl text-xl font-semibold py-4"
+        className="w-full bg-[#d4af37] text-[#181818] rounded-xl text-xl font-semibold py-3 hover:scale-105 transition-all duration-200"
       >
         Submit
       </button>

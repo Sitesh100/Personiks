@@ -154,7 +154,7 @@ const TreatmentsSection = () => {
         </p>
       </div>
 
-      <div className="relative w-full max-w-[1280px] mx-auto">
+      <div className="relative w-full max-w-[80rem] mx-auto">
         <button
           onClick={handlePrev}
           disabled={activeIndex === 0}
