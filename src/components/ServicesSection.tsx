@@ -20,15 +20,40 @@ const ServicesSection = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const resumeTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const updateArrowVisibility = () => {
+  // Handle window resize and set mobile state
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth < 640);
+      }
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+    }
+
+    // Cleanup
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
+    };
+  }, []);
+
+  const updateArrowVisibility = useCallback(() => {
     if (!scrollContainerRef.current) return;
     const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
     setShowLeftArrow(scrollLeft > 0);
     setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 1);
-  };
+  }, []);
 
   const handleScroll = useCallback(() => {
     updateArrowVisibility();
@@ -38,7 +63,7 @@ const ServicesSection = () => {
     resumeTimerRef.current = setTimeout(() => {
       setIsPaused(false);
     }, 3000);
-  }, []);
+  }, [updateArrowVisibility]);
 
   // Auto-scroll effect
   useEffect(() => {
@@ -66,14 +91,14 @@ const ServicesSection = () => {
     }, 20);
 
     return () => clearInterval(autoScroll);
-  }, [isPaused]);
+  }, [isPaused, updateArrowVisibility]);
 
   const scrollLeft = () => {
     if (!scrollContainerRef.current) return;
     setIsPaused(true);
 
     const container = scrollContainerRef.current;
-    const itemWidth = 290;
+    const itemWidth = isMobile ? 200 : 290; // Adjust item width for mobile
     const visibleItems = Math.floor(container.clientWidth / itemWidth);
     const scrollDistance = visibleItems * itemWidth;
 
@@ -92,7 +117,7 @@ const ServicesSection = () => {
     setIsPaused(true);
 
     const container = scrollContainerRef.current;
-    const itemWidth = 290;
+    const itemWidth = isMobile ? 200 : 290; // Adjust item width for mobile
     const visibleItems = Math.floor(container.clientWidth / itemWidth);
     const scrollDistance = visibleItems * itemWidth;
 
@@ -117,27 +142,27 @@ const ServicesSection = () => {
         container.removeEventListener('scroll', handleScroll);
       }
     };
-  }, [handleScroll]);
+  }, [handleScroll, updateArrowVisibility]);
 
   return (
-    <section className="bg-[#111111] text-white pt-16 relative">
-      <div className="w-full">
-        <h2 className="text-4xl md:text-[60px] font-sans ml-16">
+    <section className="bg-[#111111] text-white pt-8 md:pt-16 relative">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-sans">
           <span className="text-white">Our </span>
           <span className="text-[#D9AC47]">Specialized Services</span>
         </h2>
 
-        <p className="w-[75%] text-[22px] font-light mt-2 text-[#EAEAEA] ml-16">
+        <p className="text-base sm:text-lg md:text-xl lg:text-[22px] font-light mt-2 text-[#EAEAEA] max-w-3xl">
           Comprehensive cosmetic and medical treatments including Hymenoplasty,
           Urinary Incontinence solutions, Breast Augmentation, and advanced Skin
           Care
         </p>
 
-        <div className="mt-10 bg-[#fef5ef] py-6 w-full px-10 relative">
+        <div className="mt-6 md:mt-10 bg-[#fef5ef] py-4 md:py-6 w-full relative">
           {showLeftArrow && (
             <button
               onClick={scrollLeft}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black bg-opacity-70 text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-90 transition-all"
+              className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black bg-opacity-70 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-opacity-90 transition-all"
               aria-label="Scroll left"
             >
               &lt;
@@ -148,15 +173,17 @@ const ServicesSection = () => {
             ref={scrollContainerRef}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
-            className="flex overflow-x-auto scrollbar-hide gap-8 px-10 py-4"
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setTimeout(() => setIsPaused(false), 3000)}
+            className="flex overflow-x-auto scrollbar-hide gap-4 md:gap-8 px-4 md:px-10 py-4"
             style={{ scrollBehavior: 'smooth' }}
           >
             {services.map((service, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex flex-col items-center gap-3"
+                className="flex-shrink-0 flex flex-col items-center gap-3 w-[180px] sm:w-[200px] md:w-[250px]"
               >
-                <div className="w-[250px] h-[250px] flex items-center justify-center p-1">
+                <div className="w-full h-[180px] sm:h-[200px] md:h-[250px] flex items-center justify-center p-1">
                   <Image
                     src={service.img}
                     alt={service.title}
@@ -165,7 +192,7 @@ const ServicesSection = () => {
                     className="object-contain w-full h-full hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <p className="mt-6 font-semibold text-center text-black text-2xl">
+                <p className="mt-4 md:mt-6 font-semibold text-center text-black text-lg sm:text-xl md:text-2xl">
                   {service.title}
                 </p>
               </div>
@@ -175,7 +202,7 @@ const ServicesSection = () => {
           {showRightArrow && (
             <button
               onClick={scrollRight}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black bg-opacity-70 text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-90 transition-all"
+              className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black bg-opacity-70 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-opacity-90 transition-all"
               aria-label="Scroll right"
             >
               &gt;

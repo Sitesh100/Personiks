@@ -1,3 +1,4 @@
+
 import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
@@ -6,18 +7,13 @@ const ThighLiposuction = () => {
   const subtitle = 'by Best Liposuction Centre in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
@@ -33,24 +29,24 @@ const ThighLiposuction = () => {
 
   const faqs = [
     {
-      question: 'How long does an Arm Liposuction procedure take?',
+      question: 'Consultation',
       answer:
-        'Arm liposuction is usually completed in a single day. The procedure typically lasts between 1 to 3 hours depending on the amount of fat to be removed and the technique used. Patients can usually return home the same day after the procedure.',
+        'Consult with a Board Certified Cosmetic Surgeon Get a personalized treatment plan e.g. combine thigh Liposuction with butt and hips liposuction, tummy 360 liposuction, or CO2 Lasers for stretch marks removal Get an transparent thigh liposuction and calf liposuction cost or customized surgery package cost estimate ',
     },
     {
-      question: 'Is Arm Liposuction a Permanent Solution for Fat Removal?',
+      question: 'Surgery',
       answer:
-        'Yes, arm liposuction permanently removes fat cells from the treated areas. However, it is important to maintain a healthy lifestyle, as weight gain after the procedure can cause the remaining fat cells to expand.',
+        'Complete the surgeon prescribed pre-surgical blood test and other investigations Thigh fat removal or calf fat removal is done by our skilled board certified plastic surgeon You will stay at the center for some time for observation with same day discharge',
     },
     {
-      question: 'How long does it take to see results after Arm Liposuction?',
+      question: 'Back to Routine',
       answer:
-        'Initial changes can be seen within 1 to 2 weeks as swelling begins to subside. The final results are visible after about 2 to 3 months, once the arms have fully healed and the contour settles.',
+        'The recovery time for thigh liposuction or calf liposuction is 4 to 7 days Compression garment can help is faster healing  Followup appointment after 5-7 days to check healing Personiks also provides ultrasonic massages for faster recovery as recommended by the surgeon You can get back to your heavy workout or gym sessions after 20 to 30 days, until then you can do light activities',
     },
   ];
 
   const beforeAfterImage =
-    'https://personiks.com/wp-content/uploads/2024/02/Arm-Liposuction-Website-Icon-Before-and-After-2.jpg';
+    'https://personiks.com/wp-content/uploads/2024/02/WhatsApp-Image-2024-01-23-at-11.08.35-AM.jpeg.webp';
   return (
     <div>
       <DropDownPage

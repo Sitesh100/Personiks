@@ -1,3 +1,4 @@
+
 import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
@@ -82,6 +83,7 @@ const AcneScar = () => {
       />
     </div>
   );
+
 };
 
 export default AcneScar;

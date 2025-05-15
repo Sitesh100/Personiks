@@ -2,71 +2,59 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const LipomaRemoval = () => {
-  const title =
-    'Tighten your Vagina and Correct Urine Leakage after delivery and reduce protruding labia';
-  const subtitle = 'by Best Plastic Surgeon in Hyderabad';
+
+  const title = 'Lipoma Removal';
+  const subtitle = 'by Best Liposuction Centre in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
-    coloredTitle: 'Vaginoplasty & labiaplasty Surgery',
+    coloredTitle: 'Lipoma Removal',
     title: 'Cost in Hyderabad',
     bulletPoints: [
-      'Arm Liposuction or Arm Tuck Surgery Cost in India varies from 1 lakh to 2.5 lakhs based on your aesthetic goals and surgery package you need',
-      'If you need Arm tuck in addition to Arm Liposuction the cost will be higher, because Arm Tuck also involves skin excision to tighten the skin ',
-      'Personiks has affordable arm liposuction and arm tuck price packages that combine arms liposuction with arm tuck and bra bulge removal for your shirt or blouses to fit perfectly',
-      'The quotation given at Personiks has no hidden costs',
+      'The cost of Lipoma removal procedure ranges from Rs. 10K to Rs. 30K based on 2 factors',
+      'Number of Lipomas (Single lipoma or multiple lipoma removal)',
+      'Technology you want (Surgical lipoma excision, laser lipoma removal)',
+      'Anesthesia: Local or General',
+
     ],
   };
 
   const faqs = [
     {
-      question: 'What is Vaginoplasty?',
+
+      question:
+        'What is a lipoma, and how does it differ from other skin conditions?',
       answer:
-        'Vaginoplasty is a surgical procedure aimed at tightening the vaginal muscles and tissues that may become loose due to childbirth or aging. It helps improve vaginal tone, strength, and overall function.',
+        'A lipoma is a benign, soft tissue tumor composed of fat cells, namely primordial (baby) fat cells. Unlike other skin conditions, lipomas are non-cancerous growths and typically present as slow-growing, painless lumps under the skin.',
     },
     {
-      question: 'What is Labiaplasty?',
+      question:
+        'How common are lipomas, and who is more prone to developing them?',
       answer:
-        'Labiaplasty is a cosmetic surgery that reshapes or reduces the size of the labia minora or labia majora. It is performed for aesthetic reasons, comfort, or to correct asymmetry or irritation caused by enlarged labia.',
+        'Lipomas are relatively common, with a prevalence that increases with age. While they can occur in individuals of any age, they are more frequently observed in adults and grow very slowly. There are no clear risk factors or predisposition. At Personiks we see at least one case for lipoma every day. ',
     },
     {
-      question: 'How long do Vaginoplasty and Labiaplasty surgeries take?',
+      question:
+        'What are the common locations for lipomas to develop on the body?',
       answer:
-        'Vaginoplasty typically takes about 1 to 2 hours, and labiaplasty takes around 45 minutes to 1 hour. Both can be performed as outpatient procedures under local anesthesia with sedation or general anesthesia.',
-    },
-    {
-      question: 'Is the recovery painful after these surgeries?',
-      answer:
-        'Some discomfort, swelling, and mild pain are expected, especially in the first few days. Pain is manageable with prescribed medications, and most patients resume light activities within a week.',
-    },
-    {
-      question: 'When can I resume normal activities, including intimacy?',
-      answer:
-        'Most patients can return to non-strenuous work in about 5 to 7 days. Intimate activity should be avoided for 6 to 8 weeks or until cleared by the surgeon to ensure proper healing.',
-    },
-    {
-      question: 'Are the results permanent?',
-      answer:
-        'Yes, the results are long-lasting. However, factors like aging, future childbirth, or hormonal changes may affect the outcomes over time.',
+        'Lipomas can develop anywhere on the body but are often found on the upper arms, thighs, neck, and torso. Their location can vary, and they are typically located just beneath the skin. If they are located in exposed areas, that is when most of the clients at Personiks want to get rid of them. We have also seen Multiple lipomas, where we have seen cases of more than 40-50 lipomas. In this case, even if the lipoma is not in exposed area, clients want them removed as they are embarrassing and can make intimate partner relationships psychologically uncomfortable. ',
+
     },
   ];
 
   const beforeAfterImage =
-    'https://personiks.com/wp-content/uploads/2024/01/vaginoplasty.png.webp';
+
+    'https://personiks.com/wp-content/uploads/2024/02/Lipoma-Removal-Website-Icon-Before-and-After-1.jpg';
+
   return (
     <div>
       <DropDownPage

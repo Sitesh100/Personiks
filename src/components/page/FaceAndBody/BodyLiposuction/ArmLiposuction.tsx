@@ -6,18 +6,13 @@ const ArmLiposuction = () => {
   const subtitle = 'by Best Liposuction Centre in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
@@ -27,25 +22,24 @@ const ArmLiposuction = () => {
       'Arm Liposuction or Arm Tuck Surgery Cost in India varies from 1 lakh to 2.5 lakhs based on your aesthetic goals and surgery package you need',
       'If you need Arm tuck in addition to Arm Liposuction the cost will be higher, because Arm Tuck also involves skin excision to tighten the skin ',
       'Personiks has affordable arm liposuction and arm tuck price packages that combine arms liposuction with arm tuck and bra bulge removal for your shirt or blouses to fit perfectly',
-      'The quotation given at Personiks has no hidden costs',
     ],
   };
 
   const faqs = [
     {
-      question: 'How long does an Arm Liposuction procedure take?',
+      question: 'How long does a Hair treatment procedure take?',
       answer:
-        'Arm liposuction is usually completed in a single day. The procedure typically lasts between 1 to 3 hours depending on the amount of fat to be removed and the technique used. Patients can usually return home the same day after the procedure.',
+        'Hair treatment can be done in 1 day or 2 days, depending on the number of follicles to be grafted. Each dau sitting hours can extend up to 8 hours. In some cases 3rd day may also be needed if the client has lack of time or is unable to sit for long hours',
     },
     {
-      question: 'Is Arm Liposuction a Permanent Solution for Fat Removal?',
+      question: 'Is Hair treatment a Permanent Solution for Hair loss?',
       answer:
-        'Yes, arm liposuction permanently removes fat cells from the treated areas. However, it is important to maintain a healthy lifestyle, as weight gain after the procedure can cause the remaining fat cells to expand.',
+        'Yes, a hair treatment provides a permanent solution as the transplanted hair follicles are resistant to balding. In fact some research has shown that transplanted hair are also resistant to hormonal changes',
     },
     {
-      question: 'How long does it take to see results after Arm Liposuction?',
+      question: 'How long does it take to see results after a Beard treatment?',
       answer:
-        'Initial changes can be seen within 1 to 2 weeks as swelling begins to subside. The final results are visible after about 2 to 3 months, once the arms have fully healed and the contour settles.',
+        'The immediate post op results for beard treatment is similar to hair transplant. The details are in the FAQ above',
     },
   ];
 

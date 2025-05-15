@@ -7,28 +7,23 @@ const Burns = () => {
     ' Plastic Surgery Options for Burn Relief and Scar Management';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
     coloredTitle: 'Burns Treatment',
     title: 'Plastic Surgery Options for Burn Relief and Scar Management',
     bulletPoints: [
-      'Silver dressings are essential in the early stages of burn treatment. These dressings are armed with potent antibacterial properties, reducing the risk of infection, alleviating pain, and accelerating wound healing. They work well for first and second-degree burns, providing immediate relief.',
-      'For severe, deep burns that extend beyond the superficial skin layers, skin grafting is a vital surgical solution. This procedure involves harvesting healthy skin from one area (the donor site) and transplanting it onto the burn wound. Skin grafting covers and protects the injured area, promoting healing, and minimizing scarring.',
-      'Collagen dressings play a significant role in later-stage burn treatment, focusing on scar management and aesthetic improvement. Collagen, a natural protein, aids in tissue repair and regeneration. These dressings facilitate the body’s innate healing process, leading to better cosmetic results and reducing the risk of contractures.',
-      'Contractures occur when scar tissue tightens and restricts movement. Effective management involves various techniques, such as physical therapy to improve flexibility and surgical procedures to release tight scar tissue. Plastic surgeons perform Z-plasty or skin grafts to release contractures and restore function. Early intervention and consistent follow-up are vital for preventing long-term disability and ensuring the best possible outcome for patients with burn contractures.',
+      'Silver dressings are essential in the early stages of burn treatment. These dressings are armed with potent antibacterial properties, reducing the risk of infection, alleviating pain, and accelerating wound healing. ',
+      'For severe, deep burns that extend beyond the superficial skin layers, skin grafting is a vital surgical solution. This procedure involves harvesting healthy skin from one area (the donor site) and transplanting it onto the burn wound.',
+      'Collagen dressings play a significant role in later-stage burn treatment, focusing on scar management and aesthetic improvement.',
+      'Contractures occur when scar tissue tightens and restricts movement. Effective management involves various techniques, such as physical therapy to improve flexibility and surgical procedures to release tight scar tissue.',
     ],
   };
 
