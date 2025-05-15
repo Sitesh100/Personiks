@@ -83,8 +83,8 @@ export default function Page() {
       <Header />
 
       {/* 1) HERO SECTION */}
-      <section className="px-6 lg:px-20 py-16">
-        <div className="relative rounded-2xl overflow-hidden shadow-xl">
+      <section className="px-6 lg:px-10 py-16">
+        <div className="relative max-w-7xl rounded-2xl ml-20 overflow-hidden shadow-xl">
           <div
             className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-transparent"
             style={{ width: '65%', zIndex: 1 }}
@@ -200,13 +200,13 @@ export default function Page() {
       </section>
 
       {/* 3) SURGEON HIGHLIGHT */}
-      <section className="bg-black text-black py-20 px-6 lg:px-20">
-        <div className="bg-[#FFF9F5] max-w-6xl mx-auto flex flex-col lg:flex-row items-center rounded-2xl p-8 lg:p-12 overflow-hidden">
-          <div className="lg:w-3/5 space-y-6 pr-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-black">
+      <section className="bg-black text-black py-20 px-6 lg:px-18">
+        <div className="bg-[#FDF3EB] h-[65vh] max-w-7xl mx-auto flex flex-col lg:flex-row gap-50 items-center rounded-2xl p-8 lg:pl-20 md:p-0 overflow-hidden">
+          <div className="lg:w-3/5 ">
+            <h2 className="text-3xl lg:text-4xl font-bold text-black mb-10">
               Best Plastic Surgeon in Hyderabad
             </h2>
-            <p className="font-outfit text-base leading-relaxed text-black">
+            <p className="font-outfit text-[18px] leading-relaxed text-black">
               Dr. Guru Karna Vemula is one of the best Plastic and Cosmetic
               Surgeons in Hyderabad, renowned for his expertise in body
               contouring, facial aesthetics, and advanced reconstructive
@@ -215,7 +215,7 @@ export default function Page() {
               through cutting-edge surgical techniques and personalized patient
               care.
             </p>
-            <p className="font-outfit text-base leading-relaxed text-black">
+            <p className="font-outfit text-[18px] leading-relaxed text-black mt-5">
               In 2018, he established Personiks Cosmetic and Plastic Surgery
               Center in Hyderabad, a leading facility known for its high success
               rates in aesthetic and reconstructive procedures. With over 20+
@@ -224,40 +224,28 @@ export default function Page() {
               liposuction, fat grafting, and complex reconstructive surgeries.
             </p>
           </div>
-          <div className="lg:w-2/5 relative h-full flex items-end justify-center self-stretch">
-            <div className="relative h-full w-full flex items-end justify-center">
-              {/* Yellow circle background */}
-              <div
-                className="rounded-full absolute right-0"
-                style={{
-                  width: '100%',
-                  height: '65%',
-                  top: '0',
-                  zIndex: 0,
-                }}
-              ></div>
-              {/* Doctor image */}
-              <Image
-                src="/assets/old doctor.png"
-                alt="Dr. Vemula"
-                width={350}
-                height={500}
-                className="object-contain relative z-10"
-                style={{
-                  marginBottom: '0',
-                  maxHeight: '100%',
-                  objectFit: 'contain',
-                  objectPosition: 'bottom',
-                }}
-              />
-            </div>
+          <div className="lg:w-2/5 relative bg-[#FDF3EB] h-full flex items-end justify-center  self-stretch">
+            {/* Doctor image */}
+            <Image
+              src="/assets/old doctor.png"
+              alt="Dr. Vemula"
+              width={350}
+              height={500}
+              className="object-contain z-10 h-[100%]"
+              style={{
+                marginBottom: '0',
+                maxHeight: '100%',
+                objectFit: 'contain',
+                objectPosition: 'bottom',
+              }}
+            />
           </div>
         </div>
       </section>
 
       {/* 4) HIGHLIGHTS CAROUSEL */}
       <section className="py-16 px-6 lg:px-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[78rem] mx-auto">
           <div className="flex justify-between items-center mb-8">
             <h3 className="font-outfit text-2xl font-semibold text-white">
               Highlights
@@ -330,7 +318,9 @@ export default function Page() {
           <Image src="/assets/call.png" width={40} height={40} alt="Call Us" />
         </a>
       </div>
-      <Footer />
+      <div className="px-24">
+        <Footer />
+      </div>
     </div>
   );
 }

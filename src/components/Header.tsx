@@ -55,11 +55,11 @@ const navItems: NavItem[] = [
             href: '/gynecomastia',
           },
           { name: 'Arm Liposuction', href: '/arm-liposuction-surgery' },
-          { name: 'Tummy Liposuction & Tuck', href: '/tummy-liposuction' },
-          { name: 'Mommy Makeover TRUSTED', href: '/mommy-makeover' },
+          { name: 'Tummy Liposuction & Tuck', href: '/tummy-tuck-surgery' },
+          { name: 'Mommy Makeover TRUSTED', href: '/mommy-make-over-surgery' },
           {
             name: 'Thigh or Calf Liposuction',
-            href: '/thigh-calf-liposuction',
+            href: '/thigh-liposuction-and-calf-liposuction',
           },
           { name: 'HD Liposuction', href: '/hd-liposuction' },
           {
@@ -83,9 +83,12 @@ const navItems: NavItem[] = [
       { name: 'Corn Removal', href: '/corn-removal' },
       { name: 'Warts Removal', href: '/warts-removal' },
       { name: 'Acne Scar Treatment', href: '/acne-scar-treatment' },
-      { name: 'Scar removal for past injury', href: '/scar-removal' },
-      { name: 'Genital & Anal Warts', href: '/genital-anal-warts' },
-      { name: 'Ear Lobe Repair', href: '/ear-lobe-repair' },
+      {
+        name: 'Scar removal for past injury',
+        href: '/scar-removal-for-past-injury',
+      },
+      { name: 'Genital & Anal Warts', href: '/genital-warts-treatment' },
+      { name: 'Ear Lobe Repair', href: '/earlobe-repair-surgery' },
     ],
   },
   {
@@ -117,7 +120,7 @@ const navItems: NavItem[] = [
     href: '#',
     dropdown: [
       { name: 'Burns', href: '/treatment-for-burns-and-contractures' },
-      { name: 'Pilonidal Sinus Treatment', href: '/pilonidal-sinus' },
+      { name: 'Pilonidal Sinus Treatment', href: '/pilonidal-sinus-treatment' },
     ],
   },
   {
