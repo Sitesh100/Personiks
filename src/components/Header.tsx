@@ -100,13 +100,13 @@ const navItems: NavItem[] = [
         subDropdown: [
           { name: 'Face Fat Grafting', href: '/face-fat-grafting' },
           { name: 'Unwanted Hair', href: '/unwanted-hair' },
-          { name: 'Facial Rejuvenation', href: '/facial-rejuvenation' },
-          { name: 'Acne Scars Removal', href: '/acne-scars-removal' },
-          { name: 'Laser Skin Pigmentation', href: '/laser-pigmentation' },
-          { name: 'Laser Skin Toning', href: '/laser-toning' },
+          { name: 'Facial Rejuvenation', href: '/facial-rejuvination' },
+          { name: 'Acne Scars Removal', href: '/acne-scars-treatment' },
+          { name: 'Laser Skin Pigmentation', href: '/laser-skin-pigmentation' },
+          { name: 'Laser Skin Toning', href: '/laser-skin-toning' },
           { name: 'Contour Thread Lift', href: '/contour-thread-lift' },
           { name: 'Chemical Peel', href: '/chemical-peel' },
-          { name: 'Derma Roller in Hyderabad', href: '/derma-roller' },
+          { name: 'Derma Roller in Hyderabad', href: '/derma-rollor' },
         ],
       },
       {
@@ -126,7 +126,7 @@ const navItems: NavItem[] = [
   {
     name: 'Obesity',
     href: '#',
-    dropdown: [{ name: 'Surgical', href: '/surgical' }],
+    dropdown: [{ name: 'Surgical', href: '/obesity-surgical' }],
   },
 ];
 

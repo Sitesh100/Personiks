@@ -2,71 +2,59 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const WartsRemoval = () => {
-  const title =
-    'Tighten your Vagina and Correct Urine Leakage after delivery and reduce protruding labia';
-  const subtitle = 'by Best Plastic Surgeon in Hyderabad';
+
+  const title = 'Wart Removal';
+  const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
-    coloredTitle: 'Vaginoplasty & labiaplasty Surgery',
+    coloredTitle: 'Wart Removal Surgery',
     title: 'Cost in Hyderabad',
     bulletPoints: [
-      'Arm Liposuction or Arm Tuck Surgery Cost in India varies from 1 lakh to 2.5 lakhs based on your aesthetic goals and surgery package you need',
-      'If you need Arm tuck in addition to Arm Liposuction the cost will be higher, because Arm Tuck also involves skin excision to tighten the skin ',
-      'Personiks has affordable arm liposuction and arm tuck price packages that combine arms liposuction with arm tuck and bra bulge removal for your shirt or blouses to fit perfectly',
-      'The quotation given at Personiks has no hidden costs',
+      'Skin Tag Treatment cost can range from Rs. 3K to Rs. 25K and is driven by 3 factors',
+      'Price can range from Rs. 3K to Rs. 25K based on the number of moles',
+      'Warts removal costs are higher for larger warts requiring surgical excision. E.g. Verruca Removal from the face will be more expensive than small skin tags laser treatment ',
+      'Laser treatment for warts is lower than surgical excision',
+
     ],
   };
 
   const faqs = [
     {
-      question: 'What is Vaginoplasty?',
+
+      question:
+        'What are skin warts, and how do they differ from other skin conditions?',
       answer:
-        'Vaginoplasty is a surgical procedure aimed at tightening the vaginal muscles and tissues that may become loose due to childbirth or aging. It helps improve vaginal tone, strength, and overall function.',
+        'Skin warts, also known as skin tags, are small, benign growths that often appear on areas where skin rubs against skin or clothing. They are not cancerous and differ from other skin conditions in their appearance and texture',
     },
     {
-      question: 'What is Labiaplasty?',
+      question:
+        'Can skin warts be mistaken for moles, and how can I differentiate between them?',
       answer:
-        'Labiaplasty is a cosmetic surgery that reshapes or reduces the size of the labia minora or labia majora. It is performed for aesthetic reasons, comfort, or to correct asymmetry or irritation caused by enlarged labia.',
+        'Skin warts and moles may appear similar, but they have distinct characteristics. Skin warts are typically small, soft, and may have a stalk, while moles are often larger, flat or raised, and may have pigment.',
     },
     {
-      question: 'How long do Vaginoplasty and Labiaplasty surgeries take?',
+      question: 'Are skin warts contagious, and how do they develop?',
       answer:
-        'Vaginoplasty typically takes about 1 to 2 hours, and labiaplasty takes around 45 minutes to 1 hour. Both can be performed as outpatient procedures under local anesthesia with sedation or general anesthesia.',
-    },
-    {
-      question: 'Is the recovery painful after these surgeries?',
-      answer:
-        'Some discomfort, swelling, and mild pain are expected, especially in the first few days. Pain is manageable with prescribed medications, and most patients resume light activities within a week.',
-    },
-    {
-      question: 'When can I resume normal activities, including intimacy?',
-      answer:
-        'Most patients can return to non-strenuous work in about 5 to 7 days. Intimate activity should be avoided for 6 to 8 weeks or until cleared by the surgeon to ensure proper healing.',
-    },
-    {
-      question: 'Are the results permanent?',
-      answer:
-        'Yes, the results are long-lasting. However, factors like aging, future childbirth, or hormonal changes may affect the outcomes over time.',
+        'Some research suggests that people with human papillomavirus (HPV) may get more skin tags than others. However a clear association has not been established. That being said, skin warts are not  contagious. Factors such as friction, genetics, and hormonal changes can also play a role in the making of skin tags. ',
+
     },
   ];
 
   const beforeAfterImage =
-    'https://personiks.com/wp-content/uploads/2024/01/vaginoplasty.png.webp';
+
+    'https://personiks.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-16-at-12.17.55-PM-1.jpeg.webp';
+
+
   return (
     <div>
       <DropDownPage

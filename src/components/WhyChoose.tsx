@@ -1,5 +1,80 @@
 import Image from 'next/image';
 
+// ComparisonTable component included directly in the same file
+const ComparisonTable = () => {
+  const tableData = [
+    {
+      category: 'Expertise',
+      otherClinics: 'General Practitioners',
+      personiks: 'Certified Cosmetic Surgeons',
+    },
+    {
+      category: 'Technology',
+      otherClinics: 'Traditional Equipment',
+      personiks: 'Advanced FDA Tech',
+    },
+    {
+      category: 'Safety Protocols',
+      otherClinics: 'Basic Hygiene',
+      personiks: 'International Safety Standards',
+    },
+    {
+      category: 'Care Approach',
+      otherClinics: 'Procedure Only',
+      personiks: 'End-to-End Personalised Care',
+    },
+    {
+      category: 'Patient Reviews',
+      otherClinics: 'Mixed Feedback',
+      personiks: '4.9★ Average on Google',
+    },
+  ];
+
+  return (
+    <div className="w-full max-w-6xl mx-auto font-sans rounded-lg overflow-hidden shadow-lg">
+      {/* Header */}
+      <div
+        className="grid grid-cols-3 text-black font-semibold"
+        style={{
+          background: '#D4AF37',
+        }}
+      >
+        <div className="p-6 text-2xl">Overall Points</div>
+        <div className="p-6 text-2xl text-center">Other Clinics</div>
+        <div className="p-6 text-2xl text-center">Personiks</div>
+      </div>
+
+      {/* Spacer */}
+      <div className="h-8 bg-[#FFF8EE]"></div>
+
+      {/* Table rows */}
+      {tableData.map((row, index) => (
+        <div
+          key={index}
+          className="grid grid-cols-3 text-black mb-2"
+          style={{
+            background: '#D4AF37',
+          }}
+        >
+          <div className="p-6 text-xl font-medium flex items-center">
+            {row.category}
+          </div>
+          <div className="p-6 text-xl flex items-center justify-center relative">
+            {/* Divider line */}
+            <div className="absolute left-0 top-4 bottom-4 w-px bg-black opacity-20"></div>
+            {row.otherClinics}
+            {/* Divider line */}
+            <div className="absolute right-0 top-4 bottom-4 w-px bg-black opacity-20"></div>
+          </div>
+          <div className="p-6 text-xl flex items-center justify-center">
+            {row.personiks}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const featureCards = [
   {
     title: 'Trusted Expertise',
@@ -32,7 +107,7 @@ const WhyChoose = () => {
           {featureCards.map((item, index) => (
             <div
               key={index}
-              className="bg-black border border-white rounded-lg w-[400px] h-[180px] px-6 py-8 text-center relative group"
+              className="bg-black border border-white rounded-lg w-full md:w-[400px] h-[180px] px-6 py-8 text-center relative group"
             >
               <div className="flex justify-center mb-4 absolute w-[105px] h-[80px] top-[-30px] left-1/2 transform -translate-x-1/2">
                 <Image
@@ -49,18 +124,9 @@ const WhyChoose = () => {
           ))}
         </div>
 
-        {/* Comparison Table */}
-        <div className="w-full h-full overflow-hidden text-black font-medium text-[16px]">
-          <div className="flex justify-between items-center p-4">
-            <div className="w-full h-[620px] relative">
-              <Image
-                src="/assets/table.png"
-                alt="Comparison Table"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
+        {/* Comparison Table - replacing the image with our ComparisonTable component */}
+        <div className="w-full py-8">
+          <ComparisonTable />
         </div>
       </div>
     </section>

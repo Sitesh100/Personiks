@@ -2,71 +2,58 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const ScarRemoval = () => {
-  const title =
-    'Tighten your Vagina and Correct Urine Leakage after delivery and reduce protruding labia';
-  const subtitle = 'by Best Plastic Surgeon in Hyderabad';
+
+  const title = 'Scar revision treatment at Personiks';
+  const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
-    coloredTitle: 'Vaginoplasty & labiaplasty Surgery',
+    coloredTitle: 'Scars or Keloid Removal Treatment',
     title: 'Cost in Hyderabad',
     bulletPoints: [
-      'Arm Liposuction or Arm Tuck Surgery Cost in India varies from 1 lakh to 2.5 lakhs based on your aesthetic goals and surgery package you need',
-      'If you need Arm tuck in addition to Arm Liposuction the cost will be higher, because Arm Tuck also involves skin excision to tighten the skin ',
-      'Personiks has affordable arm liposuction and arm tuck price packages that combine arms liposuction with arm tuck and bra bulge removal for your shirt or blouses to fit perfectly',
-      'The quotation given at Personiks has no hidden costs',
+      'Scars Treatment cost can range from Rs. 10K to Rs. 45K and is driven by 3 factors',
+      'Prices can range based on technology and Treatment Method. Scars needing surgical excision with fillers or botox or fat grafting are more expensive than simple CO2 laser scar revision ',
+      'Scars removal costs are higher for larger areas, as longer procedure time or higher number of sittings would be needed',
+      'A personalized treatment cost where multiple procedures are needed for the same scar, the cost of scar treatment increases',
+
     ],
   };
 
   const faqs = [
     {
-      question: 'What is Vaginoplasty?',
+
+      question: 'What is CO2 laser treatment for scar removal?',
       answer:
-        'Vaginoplasty is a surgical procedure aimed at tightening the vaginal muscles and tissues that may become loose due to childbirth or aging. It helps improve vaginal tone, strength, and overall function.',
+        'CO2 laser treatment is a precise and effective method for scar removal. It uses focused light to vaporize damaged skin, stimulating collagen production and promoting smoother, rejuvenated skin.',
     },
     {
-      question: 'What is Labiaplasty?',
+      question: 'How does scar excision contribute to scar treatment?',
       answer:
-        'Labiaplasty is a cosmetic surgery that reshapes or reduces the size of the labia minora or labia majora. It is performed for aesthetic reasons, comfort, or to correct asymmetry or irritation caused by enlarged labia.',
+        'Scar excision involves surgically removing a scar and then closing the incision with meticulous care. This technique is suitable for certain types of scars and is often combined with other procedures for comprehensive results.',
     },
     {
-      question: 'How long do Vaginoplasty and Labiaplasty surgeries take?',
+      question:
+        'Is this personalized scar treatment approach suitable for all patients?',
       answer:
-        'Vaginoplasty typically takes about 1 to 2 hours, and labiaplasty takes around 45 minutes to 1 hour. Both can be performed as outpatient procedures under local anesthesia with sedation or general anesthesia.',
-    },
-    {
-      question: 'Is the recovery painful after these surgeries?',
-      answer:
-        'Some discomfort, swelling, and mild pain are expected, especially in the first few days. Pain is manageable with prescribed medications, and most patients resume light activities within a week.',
-    },
-    {
-      question: 'When can I resume normal activities, including intimacy?',
-      answer:
-        'Most patients can return to non-strenuous work in about 5 to 7 days. Intimate activity should be avoided for 6 to 8 weeks or until cleared by the surgeon to ensure proper healing.',
-    },
-    {
-      question: 'Are the results permanent?',
-      answer:
-        'Yes, the results are long-lasting. However, factors like aging, future childbirth, or hormonal changes may affect the outcomes over time.',
+        'Our personalized approach allows us to tailor treatments to each patient’s unique needs. During a consultation, our experienced surgeons will assess your scars and recommend a customized plan for optimal results.',
+
     },
   ];
 
   const beforeAfterImage =
-    'https://personiks.com/wp-content/uploads/2024/01/vaginoplasty.png.webp';
+
+    'https://personiks.com/wp-content/uploads/2024/03/Scar-Website-Icon-Before-and-After-1.jpg';
+
+
   return (
     <div>
       <DropDownPage

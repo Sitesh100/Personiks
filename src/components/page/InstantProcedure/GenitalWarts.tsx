@@ -2,71 +2,57 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const GenitalWarts = () => {
-  const title =
-    'Tighten your Vagina and Correct Urine Leakage after delivery and reduce protruding labia';
-  const subtitle = 'by Best Plastic Surgeon in Hyderabad';
+
+  const title = 'Genital Warts Treatment';
+  const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
-    coloredTitle: 'Vaginoplasty & labiaplasty Surgery',
+    coloredTitle: 'Genital Warts Treatment',
     title: 'Cost in Hyderabad',
     bulletPoints: [
-      'Arm Liposuction or Arm Tuck Surgery Cost in India varies from 1 lakh to 2.5 lakhs based on your aesthetic goals and surgery package you need',
-      'If you need Arm tuck in addition to Arm Liposuction the cost will be higher, because Arm Tuck also involves skin excision to tighten the skin ',
-      'Personiks has affordable arm liposuction and arm tuck price packages that combine arms liposuction with arm tuck and bra bulge removal for your shirt or blouses to fit perfectly',
-      'The quotation given at Personiks has no hidden costs',
+      'Genital Warts Treatment cost can range from Rs. 25K to Rs. 50K and is driven by 3 factors',
+      'Price can range from Rs. 3K to Rs. 25K based on the number of warts ',
+      'Warts removal costs are higher for larger warts requiring surgical excision E.g. large condyloma removal will be more expensive than small warts needing only laser genital warts treatment ',
+      'Laser treatment for genital warts is lower than surgical excision',
+
     ],
   };
 
   const faqs = [
     {
-      question: 'What is Vaginoplasty?',
+
+      question: 'What are anal and genital warts?',
       answer:
-        'Vaginoplasty is a surgical procedure aimed at tightening the vaginal muscles and tissues that may become loose due to childbirth or aging. It helps improve vaginal tone, strength, and overall function.',
+        'Anal and genital warts are growths caused by the human papillomavirus (HPV). They can appear around the genital and anal areas, often manifesting as small, flesh-colored bumps or clusters.',
     },
     {
-      question: 'What is Labiaplasty?',
+      question: 'Are anal and genital warts transmissible (contagious)?',
       answer:
-        'Labiaplasty is a cosmetic surgery that reshapes or reduces the size of the labia minora or labia majora. It is performed for aesthetic reasons, comfort, or to correct asymmetry or irritation caused by enlarged labia.',
+        'These warts are typically transmitted through direct skin-to-skin contact with an infected person, often during sexual activity. HPV is highly contagious, and even individuals with no visible warts can spread the virus.',
     },
     {
-      question: 'How long do Vaginoplasty and Labiaplasty surgeries take?',
+      question: 'What are the symptoms of anal and genital warts?',
       answer:
-        'Vaginoplasty typically takes about 1 to 2 hours, and labiaplasty takes around 45 minutes to 1 hour. Both can be performed as outpatient procedures under local anesthesia with sedation or general anesthesia.',
-    },
-    {
-      question: 'Is the recovery painful after these surgeries?',
-      answer:
-        'Some discomfort, swelling, and mild pain are expected, especially in the first few days. Pain is manageable with prescribed medications, and most patients resume light activities within a week.',
-    },
-    {
-      question: 'When can I resume normal activities, including intimacy?',
-      answer:
-        'Most patients can return to non-strenuous work in about 5 to 7 days. Intimate activity should be avoided for 6 to 8 weeks or until cleared by the surgeon to ensure proper healing.',
-    },
-    {
-      question: 'Are the results permanent?',
-      answer:
-        'Yes, the results are long-lasting. However, factors like aging, future childbirth, or hormonal changes may affect the outcomes over time.',
+        'Symptoms include the presence of small, raised growths in the genital or anal region. Itching, discomfort, or bleeding during intercourse may also occur. But overall genital and anal warts are benign and harmless, and are not known to be linked to any sexual functional problems. ',
+
     },
   ];
 
   const beforeAfterImage =
-    'https://personiks.com/wp-content/uploads/2024/01/vaginoplasty.png.webp';
+
+    'https://personiks.com/wp-content/uploads/2024/10/Hair-Transplant-2.jpg';
+
+
   return (
     <div>
       <DropDownPage

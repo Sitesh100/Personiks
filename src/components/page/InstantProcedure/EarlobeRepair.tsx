@@ -2,71 +2,55 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const EarlobeRepair = () => {
-  const title =
-    'Tighten your Vagina and Correct Urine Leakage after delivery and reduce protruding labia';
-  const subtitle = 'by Best Plastic Surgeon in Hyderabad';
+
+  const title = 'Ear Lobe Treatment';
+  const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
-    coloredTitle: 'Vaginoplasty & labiaplasty Surgery',
+    coloredTitle: 'Ear Lobe Treatment',
     title: 'Cost in Hyderabad',
     bulletPoints: [
-      'Arm Liposuction or Arm Tuck Surgery Cost in India varies from 1 lakh to 2.5 lakhs based on your aesthetic goals and surgery package you need',
-      'If you need Arm tuck in addition to Arm Liposuction the cost will be higher, because Arm Tuck also involves skin excision to tighten the skin ',
-      'Personiks has affordable arm liposuction and arm tuck price packages that combine arms liposuction with arm tuck and bra bulge removal for your shirt or blouses to fit perfectly',
-      'The quotation given at Personiks has no hidden costs',
+      'Ear Lobe Treatment cost can range from Rs. 15K to Rs. 20K and is driven by only one factor, whether you need earlobe reconstruction for one or both ear lobes',
+
     ],
   };
 
   const faqs = [
     {
-      question: 'What is Vaginoplasty?',
+
+      question:
+        'Is the cost of earlobe repair surgery inclusive of all components of the procedure?',
       answer:
-        'Vaginoplasty is a surgical procedure aimed at tightening the vaginal muscles and tissues that may become loose due to childbirth or aging. It helps improve vaginal tone, strength, and overall function.',
+        'Yes, the cost typically includes all components of the earlobe repair procedure, encompassing the surgical technique employed, post-surgery care, and follow-up consultations.',
     },
     {
-      question: 'What is Labiaplasty?',
+      question: 'What are the components of earlobe repair surgery?',
       answer:
-        'Labiaplasty is a cosmetic surgery that reshapes or reduces the size of the labia minora or labia majora. It is performed for aesthetic reasons, comfort, or to correct asymmetry or irritation caused by enlarged labia.',
+        'Earlobe repair surgery involves several components, including precise incisions, removal of excess tissue, suturing, and careful reconstruction to restore a natural and aesthetically pleasing appearance.',
     },
     {
-      question: 'How long do Vaginoplasty and Labiaplasty surgeries take?',
+      question: 'Is earlobe repair surgery a painful procedure?',
       answer:
-        'Vaginoplasty typically takes about 1 to 2 hours, and labiaplasty takes around 45 minutes to 1 hour. Both can be performed as outpatient procedures under local anesthesia with sedation or general anesthesia.',
-    },
-    {
-      question: 'Is the recovery painful after these surgeries?',
-      answer:
-        'Some discomfort, swelling, and mild pain are expected, especially in the first few days. Pain is manageable with prescribed medications, and most patients resume light activities within a week.',
-    },
-    {
-      question: 'When can I resume normal activities, including intimacy?',
-      answer:
-        'Most patients can return to non-strenuous work in about 5 to 7 days. Intimate activity should be avoided for 6 to 8 weeks or until cleared by the surgeon to ensure proper healing.',
-    },
-    {
-      question: 'Are the results permanent?',
-      answer:
-        'Yes, the results are long-lasting. However, factors like aging, future childbirth, or hormonal changes may affect the outcomes over time.',
+        'The procedure is performed under local anesthesia to minimize discomfort. Patients may experience mild discomfort during the initial healing period, which is manageable with prescribed pain medications.',
+
     },
   ];
 
   const beforeAfterImage =
-    'https://personiks.com/wp-content/uploads/2024/01/vaginoplasty.png.webp';
+
+    'https://personiks.com/wp-content/uploads/2024/02/Ear-Lobe-Website-Icon-Before-and-After-2-1.jpg';
+
+
   return (
     <div>
       <DropDownPage

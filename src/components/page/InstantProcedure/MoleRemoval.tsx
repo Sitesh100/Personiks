@@ -2,71 +2,56 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const MoleRemoval = () => {
-  const title =
-    'Tighten your Vagina and Correct Urine Leakage after delivery and reduce protruding labia';
-  const subtitle = 'by Best Plastic Surgeon in Hyderabad';
+
+  const title = 'Mole Removal';
+  const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
   ];
 
   const procedureInfo = {
-    coloredTitle: 'Vaginoplasty & labiaplasty Surgery',
+    coloredTitle: 'Mole Removal Surgery',
     title: 'Cost in Hyderabad',
     bulletPoints: [
-      'Arm Liposuction or Arm Tuck Surgery Cost in India varies from 1 lakh to 2.5 lakhs based on your aesthetic goals and surgery package you need',
-      'If you need Arm tuck in addition to Arm Liposuction the cost will be higher, because Arm Tuck also involves skin excision to tighten the skin ',
-      'Personiks has affordable arm liposuction and arm tuck price packages that combine arms liposuction with arm tuck and bra bulge removal for your shirt or blouses to fit perfectly',
-      'The quotation given at Personiks has no hidden costs',
+      'Beauty mark removal cost or mole removal cost is driven by 3 factors',
+      'Price can range from Rs. 3K to Rs. 15K based on the size of the moles',
+      'Mole removal cost can range from 3K to 50K based on the number of moles',
+      'Laser treatment for moles on face cost lower than surgical excision',
+
     ],
   };
 
   const faqs = [
     {
-      question: 'What is Vaginoplasty?',
+
+      question: 'What is a mole, and when should I consider mole removal?',
       answer:
-        'Vaginoplasty is a surgical procedure aimed at tightening the vaginal muscles and tissues that may become loose due to childbirth or aging. It helps improve vaginal tone, strength, and overall function.',
+        'As per NCI, moles is a benign (not cancer) growth on the skin that is formed by a cluster of melanocytes (cells that make your skin pigment melanin, which gives color to skin and eyes). A mole is usually dark and may be raised from the skin. Also called nevus. Most people have 10 to 45 moles that appear during childhood and the teenage years. How these moles look may change over time. ',
     },
     {
-      question: 'What is Labiaplasty?',
+      question: 'Are there any potential health risks associated with Moles?',
       answer:
-        'Labiaplasty is a cosmetic surgery that reshapes or reduces the size of the labia minora or labia majora. It is performed for aesthetic reasons, comfort, or to correct asymmetry or irritation caused by enlarged labia.',
+        'Moles are often benign and particularly non-hazardous in Indian Skin tone. Darker skin tones have much lesser risk for a skin cancer type. However, in some cases, especially when the mole changes in size, shape, or color can indicate potential health risks. In such cases it is important to consult with an expert doctor',
     },
     {
-      question: 'How long do Vaginoplasty and Labiaplasty surgeries take?',
+      question: 'What is the process of mole removal with CO2 lasers?',
       answer:
-        'Vaginoplasty typically takes about 1 to 2 hours, and labiaplasty takes around 45 minutes to 1 hour. Both can be performed as outpatient procedures under local anesthesia with sedation or general anesthesia.',
-    },
-    {
-      question: 'Is the recovery painful after these surgeries?',
-      answer:
-        'Some discomfort, swelling, and mild pain are expected, especially in the first few days. Pain is manageable with prescribed medications, and most patients resume light activities within a week.',
-    },
-    {
-      question: 'When can I resume normal activities, including intimacy?',
-      answer:
-        'Most patients can return to non-strenuous work in about 5 to 7 days. Intimate activity should be avoided for 6 to 8 weeks or until cleared by the surgeon to ensure proper healing.',
-    },
-    {
-      question: 'Are the results permanent?',
-      answer:
-        'Yes, the results are long-lasting. However, factors like aging, future childbirth, or hormonal changes may affect the outcomes over time.',
+        'CO2 laser mole removal involves using a focused beam of light to vaporize the mole tissue. This precise and non-invasive method is suitable for smaller moles, often with no or minimal scarring. It can easily be used for moles on the face due to its non-scarring outcome.',
+
     },
   ];
 
   const beforeAfterImage =
-    'https://personiks.com/wp-content/uploads/2024/01/vaginoplasty.png.webp';
+    'https://personiks.com/wp-content/uploads/2024/02/Mole-Removal-Website-Icon-Before-and-After-1.jpg';
+
+
   return (
     <div>
       <DropDownPage

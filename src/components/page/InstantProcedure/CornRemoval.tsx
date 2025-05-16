@@ -3,21 +3,18 @@ import React from 'react';
 
 const CornRemoval = () => {
   const title = 'Corn Removal';
-  const subtitle = 'by Best Plastic Surgeon in Hyderabad';
+
+  const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
   const features = [
+    { img: '/assets/natural-icon.png', title: 'Immediate and Natural Results' },
     {
-      title: 'Immediate and Natural Results',
-    },
-    {
+      img: '/assets/patient-icon.png',
       title: 'Painless and Scarless Procedure',
     },
-    {
-      title: 'Most Advanced Technologies',
-    },
-    {
-      title: 'Board Certified Surgeons',
-    },
+    { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+    { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+
   ];
 
   const procedureInfo = {
@@ -32,6 +29,7 @@ const CornRemoval = () => {
 
   const faqs = [
     {
+
       question: 'What is Vaginoplasty?',
       answer:
         'Vaginoplasty is a surgical procedure aimed at tightening the vaginal muscles and tissues that may become loose due to childbirth or aging. It helps improve vaginal tone, strength, and overall function.',
@@ -64,7 +62,10 @@ const CornRemoval = () => {
   ];
 
   const beforeAfterImage =
-    'https://personiks.com/wp-content/uploads/2024/01/vaginoplasty.png.webp';
+
+    'https://personiks.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-1.04.25-PM.jpeg.webp';
+
+
   return (
     <div>
       <DropDownPage

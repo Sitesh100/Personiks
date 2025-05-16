@@ -1,10 +1,10 @@
-import MoleRemoval from '@/components/page/InstantProcedure/MoleRemoval';
+import Surgical from '@/components/page/Obesity/Surgical';
 import React from 'react';
 
 const page = () => {
   return (
     <div>
-      <MoleRemoval />
+      <Surgical />
     </div>
   );
 };
