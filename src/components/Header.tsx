@@ -164,7 +164,7 @@ export default function Header() {
   // Helper function to check if current path matches any dropdown item
   const isActiveDropdown = (item: NavItem) => {
     return item.dropdown?.some((dropdownItem) => {
-      if ('href' in dropdownItem) {
+      if ('href' in dropdownItem && dropdownItem.href) {
         return dropdownItem.href === pathname;
       } else if (dropdownItem.subDropdown) {
         return dropdownItem.subDropdown.some(
