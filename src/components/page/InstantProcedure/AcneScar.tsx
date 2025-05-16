@@ -1,8 +1,10 @@
+
 import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const AcneScar = () => {
   const title = 'Scar removal for past injury';
+
   const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
   const features = [
@@ -13,14 +15,17 @@ const AcneScar = () => {
     },
     { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
     { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+
   ];
 
   const procedureInfo = {
     coloredTitle: 'Scars or Keloid Removal Treatment',
     title: 'Cost in Hyderabad',
     bulletPoints: [
+
       'Scars Treatment cost can range from Rs. 10K to Rs. 45K and is driven by 3 factors',
       'Prices can range based on technology and Treatment Method. Scars needing surgical excision with fillers or botox or fat grafting are more expensive than simple CO2 laser scar revision',
+
       'Scars removal costs are higher for larger areas, as longer procedure time or higher number of sittings would be needed',
       'A personalized treatment cost where multiple procedures are needed for the same scar, the cost of scar treatment increases',
     ],
@@ -31,7 +36,9 @@ const AcneScar = () => {
       question:
         'How are acnes scars formed? What does acne scar tissue consist of?',
       answer:
-        'Acne scars develop as a result of the skin’s healing process after severe acne lesions. When the skin undergoes inflammation and tissue damage, the body attempts to repair itself, leading to the formation of scars. Severe forms of acne, including nodules and cysts, are more likely to cause scarring. These lesions penetrate deeper into the skin, affecting the surrounding tissue and collagen.',
+
+        'Acne scars develop as a result of the skin’s healing process after severe acne lesions. When the skin undergoes inflammation and tissue damage, the body attempts to repair itself, leading to the formation of scars. Severe forms of acne, including nodules and cysts, are more likely to cause scarring. These lesions penetrate deeper into the skin, affecting the surrounding tissue and collagen. Scar tissue is characterized by a different composition of collagen fibers compared to normal skin tissue. It often lacks the regular pattern and elasticity of healthy skin, resulting in a distinct texture and appearance.',
+
     },
     {
       question:
@@ -45,6 +52,24 @@ const AcneScar = () => {
       answer:
         'CO2 laser is particularly effective for treating atrophic acne scars, including rolling scars and boxcar scars. Basically the scars where the epidermis (upper most of the skin) is not stuck to structures beneath due to scarring. The laser’s precision allows for targeted resurfacing, stimulating collagen production and significantly improving the appearance of these specific scar types.',
     },
+
+    {
+      question: 'What role does collagen production play in acne scar removal?',
+      answer:
+        'Collagen production is crucial for skin health. Treatments that stimulate collagen help rebuild damaged tissue, reducing the visibility of scars and enhancing skin elasticity.',
+    },
+    {
+      question:
+        'What are the different types of scars that laser treatment can address?',
+      answer:
+        'Laser treatment is effective for multiple scar types, including hypertrophic scars, atrophic scars, and those with associated redness or pigmentation issues.',
+    },
+    {
+      question: 'How does laser treatment for acne scars work?',
+      answer:
+        'Laser treatment for acne scars involves the use of focused light to stimulate collagen production, promoting skin rejuvenation and reducing the appearance of scars.',
+    },
+
   ];
 
   const beforeAfterImage =
@@ -62,6 +87,7 @@ const AcneScar = () => {
       />
     </div>
   );
+
 };
 
 export default AcneScar;
