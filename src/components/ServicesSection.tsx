@@ -146,19 +146,21 @@ const ServicesSection = () => {
 
   return (
     <section className="bg-[#111111] text-white pt-8 md:pt-16 relative">
-      <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-sans">
-          <span className="text-white">Our </span>
-          <span className="text-[#D9AC47]">Specialized Services</span>
-        </h2>
+      <div className="container mx-auto">
+        <div className="relative inline-block mb-6 md:ml-16 mx-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#f0d078] to-[#D9AC47]">
+            Our Specialized Services
+          </h2>
+          <div className="h-1 w-1/3 bg-gradient-to-r from-[#D9AC47] to-transparent mt-2 rounded-full animate-pulse"></div>
+        </div>
 
-        <p className="text-base sm:text-lg md:text-xl lg:text-[22px] font-light mt-2 text-[#EAEAEA] max-w-3xl">
+        <p className="text-base sm:text-lg md:text-xl md:ml-16 mx-4 text-gray-200 mb-10 font-light max-w-3xl leading-relaxed">
           Comprehensive cosmetic and medical treatments including Hymenoplasty,
           Urinary Incontinence solutions, Breast Augmentation, and advanced Skin
-          Care
+          Care.
         </p>
 
-        <div className="mt-6 md:mt-10 bg-[#fef5ef] py-4 md:py-6 w-full relative">
+        <div className="mt-6 md:mt-10 bg-[#fef5ef] py-4 md:py-2 w-full relative">
           {showLeftArrow && (
             <button
               onClick={scrollLeft}

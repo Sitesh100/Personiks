@@ -349,6 +349,12 @@ export default function Header() {
 
         {/* Contact Button (Desktop) */}
         <Link
+          href="/blogs"
+          className="hidden lg:flex items-center justify-center text-gray-700 hover:text-[#BFA14A] hover:bg-[#F9E8D9] text-xl"
+        >
+          Blogs
+        </Link>
+        <Link
           href="/about"
           className="hidden lg:flex items-center justify-center h-12 px-8
             rounded-full bg-[#E3B63A] text-black font-medium text-base
@@ -524,6 +530,7 @@ export default function Header() {
                   )}
                 </div>
               ))}
+              <Link href="/blogs">/blogs</Link>
               <Link
                 href="/about"
                 className="mt-4 flex items-center justify-center h-12 px-8
