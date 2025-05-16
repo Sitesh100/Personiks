@@ -1,10 +1,10 @@
-import MoleRemoval from '@/components/page/InstantProcedure/MoleRemoval';
+import UnwantedHair from '@/components/page/SkinAndHair/Skin/UnwantedHair';
 import React from 'react';
 
 const page = () => {
   return (
     <div>
-      <MoleRemoval />
+      <UnwantedHair />
     </div>
   );
 };

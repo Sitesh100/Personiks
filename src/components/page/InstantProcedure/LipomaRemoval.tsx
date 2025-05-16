@@ -49,6 +49,7 @@ const LipomaRemoval = () => {
 
   const beforeAfterImage =
     'https://personiks.com/wp-content/uploads/2024/02/Lipoma-Removal-Website-Icon-Before-and-After-1.jpg';
+
   return (
     <div>
       <DropDownPage

@@ -100,13 +100,13 @@ const navItems: NavItem[] = [
         subDropdown: [
           { name: 'Face Fat Grafting', href: '/face-fat-grafting' },
           { name: 'Unwanted Hair', href: '/unwanted-hair' },
-          { name: 'Facial Rejuvenation', href: '/facial-rejuvenation' },
-          { name: 'Acne Scars Removal', href: '/acne-scars-removal' },
-          { name: 'Laser Skin Pigmentation', href: '/laser-pigmentation' },
-          { name: 'Laser Skin Toning', href: '/laser-toning' },
+          { name: 'Facial Rejuvenation', href: '/facial-rejuvination' },
+          { name: 'Acne Scars Removal', href: '/acne-scars-treatment' },
+          { name: 'Laser Skin Pigmentation', href: '/laser-skin-pigmentation' },
+          { name: 'Laser Skin Toning', href: '/laser-skin-toning' },
           { name: 'Contour Thread Lift', href: '/contour-thread-lift' },
           { name: 'Chemical Peel', href: '/chemical-peel' },
-          { name: 'Derma Roller in Hyderabad', href: '/derma-roller' },
+          { name: 'Derma Roller in Hyderabad', href: '/derma-rollor' },
         ],
       },
       {
@@ -126,7 +126,7 @@ const navItems: NavItem[] = [
   {
     name: 'Obesity',
     href: '#',
-    dropdown: [{ name: 'Surgical', href: '/surgical' }],
+    dropdown: [{ name: 'Surgical', href: '/obesity-surgical' }],
   },
 ];
 
@@ -164,7 +164,7 @@ export default function Header() {
   // Helper function to check if current path matches any dropdown item
   const isActiveDropdown = (item: NavItem) => {
     return item.dropdown?.some((dropdownItem) => {
-      if ('href' in dropdownItem) {
+      if ('href' in dropdownItem && dropdownItem.href) {
         return dropdownItem.href === pathname;
       } else if (dropdownItem.subDropdown) {
         return dropdownItem.subDropdown.some(

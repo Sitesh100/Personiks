@@ -1,10 +1,10 @@
-import DoubleChin from '@/components/page/FaceAndBody/ProducreOfFace/DoubleChin';
+import Surgical from '@/components/page/Obesity/Surgical';
 import React from 'react';
 
 const page = () => {
   return (
     <div>
-      <DoubleChin />
+      <Surgical />
     </div>
   );
 };
