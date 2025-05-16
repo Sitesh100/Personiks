@@ -144,12 +144,15 @@ const TreatmentsSection = () => {
 
   return (
     <section className="bg-[#181818] flex flex-col w-full py-16 px-4 relative overflow-hidden">
-      <div className="mb-12 ml-16 ">
-        <h2 className="font-outfit font-normal text-[36px] sm:text-[60px] leading-[110%]">
-          <span className="text-white">Our </span>
-          <span style={{ color: '#D4AF37' }}>Treatments</span>
-        </h2>
-        <p className="font-outfit text-[#EAEAEA] text-[18px] sm:text-[20px] font-light mt-2 leading-[120%]">
+      <div className="mb-12 md:ml-16 ml-1 ">
+        <div className="relative inline-block mb-5">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#f0d078] to-[#D9AC47]">
+            Our Treatments
+          </h2>
+          <div className="h-1 w-1/3 bg-gradient-to-r from-[#D9AC47] to-transparent mt-2 rounded-full animate-pulse"></div>
+        </div>
+
+        <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-10 font-light max-w-3xl leading-relaxed">
           Clinically backed solutions delivered with expert care.
         </p>
       </div>

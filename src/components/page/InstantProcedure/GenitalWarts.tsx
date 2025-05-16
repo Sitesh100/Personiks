@@ -2,7 +2,6 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const GenitalWarts = () => {
-
   const title = 'Genital Warts Treatment';
   const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
@@ -24,13 +23,11 @@ const GenitalWarts = () => {
       'Price can range from Rs. 3K to Rs. 25K based on the number of warts ',
       'Warts removal costs are higher for larger warts requiring surgical excision E.g. large condyloma removal will be more expensive than small warts needing only laser genital warts treatment ',
       'Laser treatment for genital warts is lower than surgical excision',
-
     ],
   };
 
   const faqs = [
     {
-
       question: 'What are anal and genital warts?',
       answer:
         'Anal and genital warts are growths caused by the human papillomavirus (HPV). They can appear around the genital and anal areas, often manifesting as small, flesh-colored bumps or clusters.',
@@ -44,14 +41,11 @@ const GenitalWarts = () => {
       question: 'What are the symptoms of anal and genital warts?',
       answer:
         'Symptoms include the presence of small, raised growths in the genital or anal region. Itching, discomfort, or bleeding during intercourse may also occur. But overall genital and anal warts are benign and harmless, and are not known to be linked to any sexual functional problems. ',
-
     },
   ];
 
   const beforeAfterImage =
-
     'https://personiks.com/wp-content/uploads/2024/10/Hair-Transplant-2.jpg';
-
 
   return (
     <div>

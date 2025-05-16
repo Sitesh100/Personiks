@@ -2,7 +2,6 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const EarlobeRepair = () => {
-
   const title = 'Ear Lobe Treatment';
   const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
@@ -21,13 +20,11 @@ const EarlobeRepair = () => {
     title: 'Cost in Hyderabad',
     bulletPoints: [
       'Ear Lobe Treatment cost can range from Rs. 15K to Rs. 20K and is driven by only one factor, whether you need earlobe reconstruction for one or both ear lobes',
-
     ],
   };
 
   const faqs = [
     {
-
       question:
         'Is the cost of earlobe repair surgery inclusive of all components of the procedure?',
       answer:
@@ -42,14 +39,11 @@ const EarlobeRepair = () => {
       question: 'Is earlobe repair surgery a painful procedure?',
       answer:
         'The procedure is performed under local anesthesia to minimize discomfort. Patients may experience mild discomfort during the initial healing period, which is manageable with prescribed pain medications.',
-
     },
   ];
 
   const beforeAfterImage =
-
     'https://personiks.com/wp-content/uploads/2024/02/Ear-Lobe-Website-Icon-Before-and-After-2-1.jpg';
-
 
   return (
     <div>

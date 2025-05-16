@@ -1,4 +1,3 @@
-
 import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
@@ -15,14 +14,12 @@ const AcneScar = () => {
     },
     { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
     { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
-
   ];
 
   const procedureInfo = {
     coloredTitle: 'Scars or Keloid Removal Treatment',
     title: 'Cost in Hyderabad',
     bulletPoints: [
-
       'Scars Treatment cost can range from Rs. 10K to Rs. 45K and is driven by 3 factors',
       'Prices can range based on technology and Treatment Method. Scars needing surgical excision with fillers or botox or fat grafting are more expensive than simple CO2 laser scar revision',
 
@@ -36,9 +33,7 @@ const AcneScar = () => {
       question:
         'How are acnes scars formed? What does acne scar tissue consist of?',
       answer:
-
         'Acne scars develop as a result of the skin’s healing process after severe acne lesions. When the skin undergoes inflammation and tissue damage, the body attempts to repair itself, leading to the formation of scars. Severe forms of acne, including nodules and cysts, are more likely to cause scarring. These lesions penetrate deeper into the skin, affecting the surrounding tissue and collagen. Scar tissue is characterized by a different composition of collagen fibers compared to normal skin tissue. It often lacks the regular pattern and elasticity of healthy skin, resulting in a distinct texture and appearance.',
-
     },
     {
       question:
@@ -69,7 +64,6 @@ const AcneScar = () => {
       answer:
         'Laser treatment for acne scars involves the use of focused light to stimulate collagen production, promoting skin rejuvenation and reducing the appearance of scars.',
     },
-
   ];
 
   const beforeAfterImage =
@@ -87,7 +81,6 @@ const AcneScar = () => {
       />
     </div>
   );
-
 };
 
 export default AcneScar;

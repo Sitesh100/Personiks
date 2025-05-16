@@ -6,6 +6,7 @@ import Header from './Header';
 import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 import { YouTubeProps } from 'react-youtube'; // Import YouTubeProps
+import Link from 'next/link';
 
 interface HeroSectionProps {
   onBookNow: () => void;
@@ -99,13 +100,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookNow }) => {
 
         <p className="mt-2 text-lg font-outfit font-normal text-white">
           Access your account –{' '}
-          <span className="underline cursor-pointer hover:text-[#E3B63A] transition-colors">
-            Login
-          </span>{' '}
+          <Link href={'/login'}>
+            <span className="underline cursor-pointer hover:text-[#E3B63A] transition-colors">
+              Login
+            </span>
+          </Link>{' '}
           or{' '}
-          <span className="underline cursor-pointer hover:text-[#E3B63A] transition-colors">
-            Register
-          </span>
+          <Link href={'/register'}>
+            <span className="underline cursor-pointer hover:text-[#E3B63A] transition-colors">
+              Register
+            </span>
+          </Link>
         </p>
       </motion.div>
 

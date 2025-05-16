@@ -164,7 +164,7 @@ export default function Header() {
   // Helper function to check if current path matches any dropdown item
   const isActiveDropdown = (item: NavItem) => {
     return item.dropdown?.some((dropdownItem) => {
-      if ('href' in dropdownItem) {
+      if ('href' in dropdownItem && dropdownItem.href) {
         return dropdownItem.href === pathname;
       } else if (dropdownItem.subDropdown) {
         return dropdownItem.subDropdown.some(
@@ -349,6 +349,12 @@ export default function Header() {
 
         {/* Contact Button (Desktop) */}
         <Link
+          href="/blogs"
+          className="hidden lg:flex items-center justify-center text-gray-700 hover:text-[#BFA14A] hover:bg-[#F9E8D9] text-xl"
+        >
+          Blogs
+        </Link>
+        <Link
           href="/about"
           className="hidden lg:flex items-center justify-center h-12 px-8
             rounded-full bg-[#E3B63A] text-black font-medium text-base
@@ -524,6 +530,7 @@ export default function Header() {
                   )}
                 </div>
               ))}
+              <Link href="/blogs">/blogs</Link>
               <Link
                 href="/about"
                 className="mt-4 flex items-center justify-center h-12 px-8

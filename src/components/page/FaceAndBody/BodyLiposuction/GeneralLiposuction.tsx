@@ -1,5 +1,3 @@
-
-
 import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 

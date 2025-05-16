@@ -2,7 +2,6 @@ import DropDownPage from '@/components/DropDownPages/DropDownPages';
 import React from 'react';
 
 const ScarRemoval = () => {
-
   const title = 'Scar revision treatment at Personiks';
   const subtitle = 'by Best Cosmetic Surgeon in Hyderabad';
 
@@ -24,13 +23,11 @@ const ScarRemoval = () => {
       'Prices can range based on technology and Treatment Method. Scars needing surgical excision with fillers or botox or fat grafting are more expensive than simple CO2 laser scar revision ',
       'Scars removal costs are higher for larger areas, as longer procedure time or higher number of sittings would be needed',
       'A personalized treatment cost where multiple procedures are needed for the same scar, the cost of scar treatment increases',
-
     ],
   };
 
   const faqs = [
     {
-
       question: 'What is CO2 laser treatment for scar removal?',
       answer:
         'CO2 laser treatment is a precise and effective method for scar removal. It uses focused light to vaporize damaged skin, stimulating collagen production and promoting smoother, rejuvenated skin.',
@@ -45,14 +42,11 @@ const ScarRemoval = () => {
         'Is this personalized scar treatment approach suitable for all patients?',
       answer:
         'Our personalized approach allows us to tailor treatments to each patient’s unique needs. During a consultation, our experienced surgeons will assess your scars and recommend a customized plan for optimal results.',
-
     },
   ];
 
   const beforeAfterImage =
-
     'https://personiks.com/wp-content/uploads/2024/03/Scar-Website-Icon-Before-and-After-1.jpg';
-
 
   return (
     <div>
