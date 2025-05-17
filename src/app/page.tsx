@@ -25,7 +25,6 @@ export default function Home() {
   return (
     <>
       <div className="w-full overflow-hidden ">
-        {/* <Header /> */}
         {/* Pass the handler ONLY to HeroSection */}
         <HeroSection onBookNow={handleBookNow} />
 
