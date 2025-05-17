@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 
 // Define the type for params
 interface Props {
-  params: Promise<{ slug: keyof typeof pageData }>; // params is a Promise in Next.js 15
+  params: Promise<{ slug: keyof typeof pageData }>;
 }
 
 const DynamicPage = async ({ params }: Props) => {
