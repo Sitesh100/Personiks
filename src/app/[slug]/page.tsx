@@ -1,21 +1,49 @@
-import React from 'react';
-import DropDownPage from '@/components/DropDownPages/DropDownPages'; // Fixed the import path to match your error message
-import pageData from '@/utils/data'; // Adjusted the import path to match your project structure
 import { notFound } from 'next/navigation';
+import DropDownPage from '@/components/DropDownPages/DropDownPages';
+import dbConnect from '@/lib/db';
+import PageData from '@/models/PageData';
 
-// Define the type for params
-interface Props {
-  params: Promise<{ slug: keyof typeof pageData }>;
+interface PageParams {
+  slug: string;
 }
 
-const DynamicPage = async ({ params }: Props) => {
-  // Await the params object to resolve the Promise
-  const { slug } = await params;
-  const data = pageData[slug];
+interface PageDataResponse {
+  _id?: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  features: { img: string; title: string }[];
+  procedureInfo: {
+    coloredTitle: string;
+    title: string;
+    bulletPoints: string[];
+  };
+  faqs: { question: string; answer: string }[];
+  beforeAfterImage: string;
+}
 
-  if (!data) {
-    notFound(); // Show 404 if the slug doesn't exist in pageData
+async function fetchPageData(slug: string): Promise<PageDataResponse | null> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXTAUTH_URL}/api/page/${slug}`,
+      {
+        cache: 'no-store', // ensures fresh content
+      }
+    );
+
+    if (!response.ok) return null;
+    return await response.json();
+  } catch (error) {
+    console.error('Fetch error:', error);
+    return null;
   }
+}
+
+const DynamicPage = async ({ params }: { params: PageParams }) => {
+  const { slug } = params;
+  const data = await fetchPageData(slug);
+
+  if (!data) return notFound();
 
   return (
     <div>
@@ -33,10 +61,23 @@ const DynamicPage = async ({ params }: Props) => {
 
 export default DynamicPage;
 
-// Generate static paths for all slugs (optional, for static generation)
-export async function generateStaticParams() {
-  const slugs = Object.keys(pageData);
-  return slugs.map((slug) => ({
-    slug,
+// Optional SEO metadata
+export async function generateMetadata({ params }: { params: PageParams }) {
+  const data = await fetchPageData(params.slug);
+  if (!data) return { title: 'Page Not Found' };
+
+  return {
+    title: data.title,
+    description: data.subtitle,
+  };
+}
+
+// Generate static paths for build
+export async function generateStaticParams(): Promise<PageParams[]> {
+  await dbConnect();
+  const pages = await PageData.find({}, 'slug').lean();
+
+  return pages.map((page) => ({
+    slug: page.slug as string,
   }));
 }
