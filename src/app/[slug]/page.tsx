@@ -26,11 +26,8 @@ async function fetchPageData(slug: string): Promise<PageDataResponse | null> {
   try {
     const response = await fetch(
       `${process.env.NEXTAUTH_URL}/api/page/${slug}`,
-      {
-        cache: 'no-store', // ensures fresh content
-      }
+      { next: { revalidate: 60 } } // Revalidate every 60 seconds
     );
-
     if (!response.ok) return null;
     return await response.json();
   } catch (error) {
@@ -39,8 +36,8 @@ async function fetchPageData(slug: string): Promise<PageDataResponse | null> {
   }
 }
 
-const DynamicPage = async ({ params }: { params: PageParams }) => {
-  const { slug } = params;
+const DynamicPage = async ({ params }: { params: Promise<PageParams> }) => {
+  const { slug } = await params;
   const data = await fetchPageData(slug);
 
   if (!data) return notFound();
@@ -62,8 +59,13 @@ const DynamicPage = async ({ params }: { params: PageParams }) => {
 export default DynamicPage;
 
 // Optional SEO metadata
-export async function generateMetadata({ params }: { params: PageParams }) {
-  const data = await fetchPageData(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<PageParams>;
+}) {
+  const { slug } = await params;
+  const data = await fetchPageData(slug);
   if (!data) return { title: 'Page Not Found' };
 
   return {
