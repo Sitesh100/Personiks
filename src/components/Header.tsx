@@ -64,7 +64,7 @@ const navItems: NavItem[] = [
           { name: 'HD Liposuction', href: '/hd-liposuction-treatment' },
           {
             name: 'Butt & Hips Liposuction or Butt Lift',
-            href: '/butt-hips-liposuction',
+            href: '/butt-lift-and-hips-liposuction',
           },
           {
             name: 'Vaginoplasty & Labiaplasty',
