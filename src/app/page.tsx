@@ -12,6 +12,7 @@ import FaqSection from '@/components/FaqSection';
 import Modal from '@/components/Modal';
 import BookingForm from '@/components/BookingForm';
 import Footer from '@/components/Footer';
+// import Header from '@/components/Header';
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
@@ -23,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden ">
         {/* Pass the handler ONLY to HeroSection */}
         <HeroSection onBookNow={handleBookNow} />
 
