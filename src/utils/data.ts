@@ -1156,6 +1156,914 @@ const pageData: PageDataMap = {
     beforeAfterImage:
       'https://personiks.com/wp-content/uploads/2023/10/Burns-Skin-Grafting-1.jpg',
   },
-};
+  'pilonidal-sinus-treatment': {
+    title: 'Pilonidal Sinus Treatment',
+    subtitle: ' Essential Steps to a Pain-Free Life',
 
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Pilonidal Sinus Treatment',
+      title: 'Treatment Options at Personiks:',
+      bulletPoints: [
+        'ncision and Drainage: Provides immediate relief but doesn’t prevent recurrence.',
+        'Laser Hair Removal: Addresses hair-related triggers, reducing the chances of recurrence.',
+        'Excision and Flap Procedures: Surgical removal of the cyst and affected tissue, with reconstruction for lower recurrence rates.',
+        'Seeking professional advice early is key to a smoother path to recovery, enhancing the quality of life for pilonidal sinus sufferers.',
+      ],
+    },
+
+    faqs: [
+      {
+        question:
+          'Is laser hair removal a permanent solution for pilonidal sinus?',
+        answer:
+          'While laser hair removal is not a cure for the sinus itself, it effectively reduces hair growth in the affected area, significantly lowering the risk of recurrence after treatment. It’s often recommended as a long-term preventive measure alongside surgical or drainage procedures.',
+      },
+      {
+        question: ' How long is the recovery after excision and flap surgery?',
+        answer:
+          'Recovery time can vary based on the extent of the procedure and individual healing, but most patients can return to normal activities within 2–4 weeks. Proper wound care and follow-up with your surgeon are crucial to ensuring a smooth and infection-free recovery.',
+      },
+      {
+        question: 'What causes a pilonidal sinus and who is most at risk?',
+        answer:
+          'A pilonidal sinus is often caused by loose hairs penetrating the skin, leading to infection and cyst formation. It commonly affects people who sit for long periods, have coarse body hair, or experience frequent friction in the lower back area. Young adults and men are generally more prone to this condition.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2023/10/pilonidal-sinus-repair-by-rhomboid-flap-e-1.png',
+  },
+  'chemical-peel': {
+    title: 'Chemical Peel in Hyderabad',
+    subtitle: 'by Best Dermatologist Centre in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Chemical Peel Surgery',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The cost of a chemical peel in Hyderabad can vary depending on several factors, including the type of peel, the strength of the peel, the number of treatments required, and the location and reputation of the skincare professional or clinic performing the treatment.On average, the cost of a chemical peel in Hyderabad can range from INR 2,500 to INR 10,000 per session',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is double chin removal treatment?',
+        answer:
+          'A chemical peel is a cosmetic treatment that involves the application of a chemical solution to the skin to exfoliate and remove the top layer of damaged skin. This can improve the appearance of the skin, reduce fine lines and wrinkles, and treat acne and other skin concerns.',
+      },
+      {
+        question: 'What types of chemical peels are available?',
+        answer:
+          'There are several types of chemical peels, including superficial, medium, and deep peels. The type of peel used will depend on the patient’s skin concerns and skin type.',
+      },
+      {
+        question: 'Is a chemical peel painful?',
+        answer:
+          'Patients may experience some discomfort during a chemical peel, such as a tingling or burning sensation, but this typically subsides once the chemical solution is removed. If a deeper peel is being performed, a numbing cream may be applied to the skin to reduce discomfort.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2023/02/chemical-Peel.jpg',
+  },
+  'contour-thread-lift': {
+    title: 'Contour Thread Lift',
+    subtitle: 'Best Liposuction Centre in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Contour Thread',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The cost of the Contour Thread procedure can vary depending on several factors, including the location, the experience and qualifications of the physician performing the procedure, the number of threads required, and the extent of the correction needed.but may typically range from INR 50,000 to INR 2,00,000 or more.',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What are contour threads?',
+        answer:
+          'Contour threads are a type of non-surgical cosmetic procedure that involves inserting thin, dissolvable threads into the skin to lift and tighten sagging areas.',
+      },
+      {
+        question: 'How do contour threads work?',
+        answer:
+          'Contour threads work by physically lifting and supporting the skin. The threads are inserted under the skin and then pulled taut to lift the targeted areas. Over time, the threads dissolve and are absorbed by the body, leaving behind natural collagen production for long-lasting results.',
+      },
+      {
+        question: 'What areas of the face can be treated with contour threads?',
+        answer:
+          'Contour threads can be used to lift and tighten various areas of the face, including the cheeks, jowls, eyebrows, and neck.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2023/02/Countor-thread-lift.jpg',
+  },
+  'derma-rollor': {
+    title: 'Derma Rooller Treatment',
+    subtitle: 'Best Dermatologist Centre in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Derma Rollor',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'However, the cost of a derma roller in Hyderabad may vary depending on various factors such as the brand, quality, size, and the location where it is sold. Generally, the cost of a derma roller in Hyderabad can range from INR 300 to INR 2000. It is recommended to do some research, compare prices and quality from different sources before making a purchase. Additionally, it is important to make sure that the derma roller is from a trusted source and is sterile to avoid any potential risk of infection.',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is a derma roller?',
+        answer:
+          'A derma roller is a handheld device that has a roller with small needles attached to it. It is used to create tiny punctures in the skin to stimulate the body’s natural healing response and improve skin texture and tone.',
+      },
+      {
+        question: 'What are the benefits of using a derma roller?',
+        answer:
+          'Derma rollers can help to improve the appearance of acne scars, fine lines and wrinkles, hyperpigmentation, uneven skin texture, and stretch marks. They can also help to stimulate collagen production and improve overall skin health.',
+      },
+      {
+        question: 'Is derma rolling painful?',
+        answer:
+          'Derma rolling can cause some discomfort, but it is typically not painful. The sensation can feel like a mild prickling or tingling sensation on the skin.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2023/02/derma-roller.jpg',
+  },
+  'facial-rejuvination': {
+    title: 'Facial Rejuvination',
+    subtitle: 'by skin specialist in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Facial Rejuvenation',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The cost of facial rejuvenation in Hyderabad can vary depending on the specific treatment or combination of treatments that are recommended for your individual needs and goals. However, to give you an idea of the cost  typically range from INR 20,000 to INR 2,00,000 or more.',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is facial rejuvenation, and how does it work?',
+        answer:
+          'Facial rejuvenation is a set of cosmetic procedures designed to restore a more youthful appearance to the face. It can involve a variety of non-surgical and surgical treatments, including Botox, dermal fillers, chemical peels, and facelifts. The goal of facial rejuvenation is to address specific concerns such as fine lines, wrinkles, and sagging skin to create a more youthful, refreshed appearance.',
+      },
+      {
+        question:
+          'What are the different types of facial rejuvenation treatments available?',
+        answer:
+          'There are many different types of facial rejuvenation treatments available, including non-surgical treatments like Botox, dermal fillers, chemical peels, and microdermabrasion, as well as surgical treatments like facelifts and brow lifts. The specific treatments used will depend on the individual’s needs and goals.',
+      },
+      {
+        question: 'What are the benefits of facial rejuvenation?',
+        answer:
+          'Facial rejuvenation can provide a wide range of benefits, including a more youthful appearance, improved skin texture and tone, reduced fine lines and wrinkles, and increased self-confidence.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-28-at-5.16.26-PM.jpeg',
+  },
+  'laser-skin-pigmentation': {
+    title: 'Laser Skin Pigmentation',
+    subtitle: 'by Best Cosmetic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Laser Skin Pigmentation',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The cost of laser skin pigmentation treatment in Hyderabad can vary depending on various factors such as the size and location of the treatment area, the type of laser used, and the number of sessions required for optimal results. On average, the cost of laser skin pigmentation treatment in Hyderabad can range from Rs. 3,000 to Rs. 15,000 per session.',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is laser skin pigmentation treatment?',
+        answer:
+          'Laser skin pigmentation treatment is a cosmetic procedure that uses laser technology to target and break down areas of excessive pigmentation in the skin.',
+      },
+      {
+        question:
+          'What types of pigmented lesions can be treated with laser skin pigmentation?',
+        answer:
+          'Laser skin pigmentation can be used to treat a range of pigmented lesions, such as sun spots, age spots, freckles, and some types of birthmarks.',
+      },
+      {
+        question: 'How does laser skin pigmentation work?',
+        answer:
+          'The laser emits a focused beam of light that is absorbed by the melanin pigment in the skin, causing the pigmented cells to break apart and eventually be eliminated by the body’s natural processes.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2023/02/Pigmentation-1.jpg',
+  },
+  'laser-skin-toning': {
+    title: 'Lazer Skin Toning',
+    subtitle: 'by skin specialist in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Skin Laser Toning',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The cost of laser skin toning in Hyderabad can vary depending on the type of laser used, the number of sessions required, the location of the treatment center, and other factors. On average, the cost of laser skin toning in Hyderabad can range from Rs. 3,000 to Rs. 15,000 per session.',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is laser skin toning?',
+        answer:
+          'Laser skin toning is a non-invasive cosmetic procedure that uses laser technology to improve the appearance of skin texture, tone, and pigmentation.',
+      },
+      {
+        question: 'How does laser skin toning work?',
+        answer:
+          'Laser skin toning works by using a laser to heat the dermis layer of the skin, stimulating collagen production and causing the skin to tighten. The laser is also used to target and break down pigmentation, reducing the appearance of dark spots and discoloration.',
+      },
+      {
+        question: 'Is laser skin toning safe?',
+        answer:
+          'Yes, laser skin toning is generally considered safe when performed by a qualified and experienced professional. However, as with any medical procedure, there is a risk of side effects such as redness, swelling, and skin irritation.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2023/02/Skin-Toning-.jpg',
+  },
+  'unwanted-hair': {
+    title: 'Laser Hair Removal',
+    subtitle: 'by Best Cosmetic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Laser Hair Removal',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The Laser Hair Removal in Hyderabad cost depends on the body part that is targeted, as larger body parts take longer treatment time.',
+        'For most people 6 sittings of laser hair reduction are enough to get complete benefit, hence purchasing a 6 sitting package can be more cost effective',
+        'Personiks offers 40% discount on 6 sitting package, and if you need 1-2 session more to achieve the extra results, then you don’t have to pay extra, as we are focused on the outcomes ',
+        'Best Laser Hair Removal / Reduction Treatment Services in Hyderabad.',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'How long does a Hair treatment procedure take?',
+        answer:
+          'Hair treatment can be done in 1 day or 2 days, depending on the number of follicles to be grafted. Each dau sitting hours can extend up to 8 hours. In some cases 3rd day may also be needed if the client has lack of time or is unable to sit for long hours',
+      },
+      {
+        question: 'Is Hair treatment a Permanent Solution for Hair loss?',
+        answer:
+          'Yes, a hair treatment provides a permanent solution as the transplanted hair follicles are resistant to balding. In fact some research has shown that transplanted hair are also resistant to hormonal changes',
+      },
+      {
+        question:
+          'How long does it take to see results after a Beard treatment?',
+        answer:
+          'The immediate post op results for beard treatment is similar to hair transplant. The details are in the FAQ above',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/03/Under-Arms.webp',
+  },
+  'chin-implant-augmentation': {
+    title: 'Chin implant / extension / augmentation',
+    subtitle: 'by Best Plastic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Chin Augmentation Surgery',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The Chin Implant Surgery cost and double chin removal cost in India, depends on your aesthetic goals',
+        'Personiks has affordable packages that combine buccal fat pad removal with chin liposuction or neck liposuction',
+        'The cost for Chin Implants is 70K and upwards depending on the combination of procedures',
+        'The quotation given at Personiks has no hidden costs',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'Consultation',
+        answer:
+          'Consult with a Board Certified Cosmetic SurgeonGet a personalized treatment plan e.g. combine chin augmentation with double chin liposuction and buccal fat removal in the treatment plan Get an transparent chin implant cost estimate, or customized plastic surgery cost estimate',
+      },
+      {
+        question: 'Surgery',
+        answer:
+          'Get a jaw x-ray for measurements for chin implantComplete the surgeon prescribed pre-surgical viral screen blood test .The chin implant is inserted surgically by a board certified plastic surgeon In less than 60 minutes you can have a sharp jawline ',
+      },
+      {
+        question: 'Back to Routine',
+        answer:
+          'You can get back to work the very next day Chin Implant is like correcting a weak or small chin in matter of minutes Followup appointment after 5 days to check healing',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/10/Hair-Transplant-2.jpg',
+  },
+  'dimple-creation': {
+    title: 'Get Deepika Padukone like dimples with dimple creation surgery',
+    subtitle: 'by Best Plastic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Personiks',
+      title: 'Dimple Creation Packages.',
+      bulletPoints: [
+        'The cost for this procedure is varies form 40K to 1 lakh, depending on whether you are doing only dimple creation, or are you combining it with buccal fat removal or Face Fat Grafting',
+        'Our Board certified plastic surgeons offer more comprehensive options for enhancing your face beauty by combining different techniques to create an enhanced version of you. Dimple Creation in Hyderabad',
+        'Dimple creation at Personiks ensures you get balanced dimples on both your cheeks',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is dimple creation surgery, and how is it performed?',
+        answer:
+          'Dimple creation surgery is a cosmetic procedure where a small, natural-looking dimple is created on the cheeks. It is typically performed by making a small incision on the inside of the cheek, allowing for a quick and minimally invasive process.',
+      },
+      {
+        question: 'Who is a suitable candidate for dimple creation surgery?',
+        answer:
+          'Dimple creation surgery is suitable for individuals looking to enhance their facial features with a charming dimple. Good candidates should be in good overall health and have realistic expectations about the procedure.',
+      },
+      {
+        question: 'Is dimple creation surgery reversible?',
+        answer:
+          'TDimple creation surgery is considered permanent, as it involves creating a small connection between the skin and the cheek muscle. While it is technically not reversible, any concerns or adjustments can be discussed with the surgeon.',
+      },
+      {
+        question: 'What is the recovery time after dimple creation surgery?',
+        answer:
+          'Recovery time is relatively short, with most individuals being able to resume normal activities within a few days. There may be mild swelling or discomfort initially, but these typically subside quickly.',
+      },
+      {
+        question: 'Are the results of dimple creation surgery natural-looking?',
+        answer:
+          'Yes, when performed by a skilled and experienced surgeon, the results of dimple creation surgery are often natural-looking and harmonious with the individual’s facial features.',
+      },
+      {
+        question:
+          '   Can dimple creation surgery be combined with other cosmetic procedures?',
+        answer:
+          'Dimple creation surgery can be a standalone procedure or combined with other cosmetic surgeries if desired. This can be discussed during the consultation based on individual goals.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/02/Dimple-Website-Icon-Before-and-After-2-1.jpg',
+  },
+  'ear-shaping': {
+    title: 'Reshape or ears or correct ear deformity',
+    subtitle: 'by Best Otoplasty Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Ear Surgery',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'Prices can range based on technology and Treatment Method. Scars needing surgical excision with fillers or botox or fat grafting are more expensive than simple CO2 laser scar revision',
+        'Scars removal costs are higher for larger areas, as longer procedure time or higher number of sittings would be needed',
+        'A personalized treatment cost where multiple procedures are needed for the same scar, the cost of scar treatment increases',
+        // Removed the empty item here
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'Who is a good candidate for otoplasty?',
+        answer:
+          'Good candidates for otoplasty are individuals with concerns about the shape, size, or position of their ears. The procedure is suitable for both children as young as 10 years, teens and adults. There is no age limit for ear shaping as long as you are healthy for the procedure to be done',
+      },
+      {
+        question: 'Is otoplasty a painful procedure?',
+        answer:
+          'Not exactly, because the discomfort is typically well-managed with pain medications',
+      },
+      {
+        question: 'What is the recovery time for otoplasty?',
+        answer:
+          'The recovery is fairly simple. You are discharged on the same day after the procedure. The doctor will give you pain killer medications and antibiotics that will help you manage the discomfort. There is no need for bed rest and you can resume light work the next day, and full activities within 5-7 days.',
+      },
+      {
+        question: 'How do I choose the right otoplasty surgeon?',
+        answer:
+          'Look for a board-certified plastic surgeon with experience in otoplasty. Research their qualifications, view before-and-after photos, and schedule a consultation to discuss your goals.',
+      },
+      {
+        question: 'Does insurance cover the cost of otoplasty?',
+        answer:
+          'In most cases, otoplasty is considered a cosmetic procedure, and insurance may not cover it. However, this can vary, especially if the ear shape has functional problems. If the procedure seems medically necessary to our Surgeon, Personiks can support with insurance reimbursement documents',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/02/Ear-Shaping-Website-Icon-Before-and-After-1-1.jpg',
+  },
+  'eyelid-surgery': {
+    title: 'Treat under eye bags permanently',
+    subtitle: 'by Best Plastic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Eyelid Blepharoplasty Treatment',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'Eyelid surgery cost from Rs.1 lakh to 2 lakhs depending on whether you want both eyelids treatment, whether you need CO2 Laser in addition to blepharoplasty for treating eyebags, or whether you also need brow lift to correct droopy eyes',
+        'Eyelid surgery cost is driven by the skill of the surgeon. Since it is a very delicate surgery it must be done by a Board Certified Surgeon. The surgeon cost is the most important component in this surgery',
+        'Personiks also offers hassle free Zero Cost EMI for people who cannot bear the cost of blepharoplasty upfront',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'Consultation',
+        answer:
+          'Consult with our Board Certified Cosmetic Surgeon Get a personalized treatment plan e.g. combine with brow lift and CO2 laser for younger looking eyes Get a Eyelid Surgery cost estimate, or customized plastic surgery cost estimate',
+      },
+      {
+        question: 'Surgery',
+        answer:
+          'Complete the surgeon prescribed pre-surgical blood test Surgery is done under Local Anesthesia Eyelid Surgery is done only by our skilled board certified plastic surgeons Permanent solution for Puffy Eyes, Droopy Eyes or Ageing Eyes or Drooping Eyebrows with natural and youthful eyes',
+      },
+      {
+        question: 'Back to Routine',
+        answer:
+          'You can get back to work after 5-7 days Blepharoplasty is a permanent solution for your Eye Bags problem Followup appointment after 5 days to check healing',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/02/Eye-lid-Website-Icon-Before-and-After-1.jpg',
+  },
+  'face-fat-grafting': {
+    title:
+      'Rejuvenate your face, restore face volume and face contouring with best fat grafting center',
+    subtitle: 'by Best Plastic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Facial Fat Grafting Procedure',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The cost in Hyderabad varies depending on the part of the face you want to target, as multiple parts increase the procedure time',
+        'Fat grafting cost is driven by the procedure time, example lip fat grafting will be cheaper than fat grafting for face',
+        'Please visit Breast Augmentation page, if you are interested in knowing more about breast fat grafting ',
+        'Fat grafting may prove to be more cost effective in the long run as compared to fillers, as the fat left after absorption post the fat injection can stay long',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is fat grafting, and how does it work?',
+        answer:
+          'Fat grafting, also known as fat transfer, is a cosmetic procedure that involves harvesting fat from one area of the body through liposuction and injecting it into another area, such as the face, to enhance volume and contours.',
+      },
+      {
+        question: 'Is fat grafting a safe procedure?',
+        answer:
+          'Yes, fat grafting is considered safe when performed by a qualified and experienced plastic surgeon. Using the patient’s own fat reduces the risk of allergic reactions or rejection.',
+      },
+      {
+        question: 'What areas of the face can be treated with fat grafting?',
+        answer:
+          'Fat grafting is commonly used to enhance volume in areas such as the cheeks, lips, temples, and chin, providing a natural and harmonious result.',
+      },
+      {
+        question: 'How long do the results of fat grafting last?',
+        answer:
+          'While not all transferred fat may survive, a portion can become permanent. Results are long-lasting, and touch-up sessions can be performed if needed.',
+      },
+      {
+        question:
+          'What is the difference between fat grafting and dermal fillers?',
+        answer:
+          'Fat grafting uses the patient’s own fat, providing natural and longer-lasting results. Dermal fillers use synthetic substances and offer temporary enhancements.',
+      },
+      {
+        question: 'Can fat grafting be combined with other procedures?',
+        answer:
+          'Yes, fat grafting can be combined with other facial procedures, such as facelift or rhinoplasty, for a more comprehensive enhancement tailored to individual goals.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/02/Face-Fat-Website-Icon-Before-and-After-2-1-1.jpg',
+  },
+  'lip-correction': {
+    title:
+      'Reshape your lips, enhance your smile line and make your lips plumper and younger',
+    subtitle: 'by Best Plastic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Lip Contouring and Lip Augmentation Procedure',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'The cost in Hyderabad varies depending on your treatment choice. While the lip fillers cost starts from Rs. 25K to 50K depending on the procedure choice, The procedures available are lip fillers, lip fat grafting and lip reduction',
+        'Lip procedures can be combined with buccal fat removal, chin augmentation, or double chin removal for enhancing the lower face profile ',
+        'Lip fillers are the most popular procedure choice, but many of our patients also opt for lip fat grafting hoping for longer term results, which may or may not happen',
+        'Board certified plastic surgeons offer more options for lip related procedures. Discuss your esthetic goals clearly with the surgeon and get a price quotation accordingly',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'Are lip fillers safe, and how long do the results last?',
+        answer:
+          'Lip fillers, when administered by a qualified professional, are generally safe. Results are temporary and can last several months, with individual variations. Hyaluronic acid fillers, in particular, are reversible.',
+      },
+      {
+        question:
+          'What is lip fat grafting, and how does it differ from fillers?',
+        answer:
+          'Lip fat grafting involves using the patient’s own fat, harvested through liposuction, to augment the lips. It provides a more natural option with potentially permanent results compared to temporary fillers.',
+      },
+      {
+        question: 'Can lip fillers look natural, and how is it achieved?',
+        answer:
+          'Yes, lip fillers can achieve natural-looking results when administered by an experienced professional. The key is to maintain proportion and balance, avoiding overfilling for a more subtle enhancement.',
+      },
+      {
+        question: 'What is the downtime for lip filler injections?',
+        answer:
+          'Lip filler injections typically have minimal downtime. Patients may experience temporary swelling or bruising, but they can usually resume normal activities immediately after the procedure.',
+      },
+      {
+        question:
+          'What is lip reduction, and how does it differ from lip augmentation?',
+        answer:
+          'Lip reduction, or cheiloplasty, is a cosmetic procedure aimed at decreasing the size of the lips. Unlike lip augmentation, which adds volume, lip reduction focuses on achieving a more proportionate and balanced lip appearance.',
+      },
+      {
+        question: 'Who is a good candidate for lip reduction?',
+        answer:
+          'Good candidates for lip reduction are individuals who feel their lips are excessively large or disproportionate to their facial features. The procedure is tailored to address specific concerns about lip size.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/02/Lip-Correction-Website-Icon-Before-and-After-2-1.jpg',
+  },
+  'rhinoplasty-surgery': {
+    title: 'Reshape your nose by Best Rhinoplasty Surgeon in Hyderabad',
+    subtitle: 'by Best Plastic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Rhinoplasty Surgery',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'Rhinoplasty cost in Hyderabad varies from Rs. 35K to 3 lakhs depending on the treatment plan. Liquid rhinoplasty is cheaper, but not a permanent result. Permanent results procedure like nasal implants, surgical rhinoplasty and septoplasty are costlier',
+        'Surgical Rhinoplasty is a single sitting procedure but liquid rhinoplasty needs to be repeated after 6-12 months, hence the long term cost of liquid rhinoplasty might end up being higher',
+        'Personiks also offers customized rhinoplasty procedures for defect correction which can be combined with sinus surgery, helping you to treat recurrent sinusitis as well as nose shaping',
+        'Rhinoplasty can be combined with other procedures like chin augmentation or blepharoplasty for a more comprehensive facial enhancement. It is possible to combine these in a single sitting and also get cost benefit as a customized package',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is the difference between open and closed rhinoplasty?',
+        answer:
+          'Open rhinoplasty involves an external incision, providing better visibility for complex procedures. Closed rhinoplasty is performed internally, leaving no visible external scars. At Personiks we prefer Closed Rhinoplasty to give a scarless result.',
+      },
+      {
+        question: 'Can rhinoplasty improve breathing issues?',
+        answer:
+          'Yes, rhinoplasty can address breathing difficulties by incorporating functional adjustments, such as septoplasty, to correct a deviated septum or other structural issues that may impede airflow.',
+      },
+      {
+        question: 'How long does it take to recover from rhinoplasty?',
+        answer:
+          'Initial recovery typically takes just 1-2 weeks, but complete healing may take more time with the final results becoming apparent as the nose settles into its new shape.',
+      },
+      {
+        question: 'Are there non-surgical options for nose enhancement?',
+        answer:
+          'Open rhinoplasty involves an external incision, providing better visibility for complex procedures. Closed rhinoplasty is performed internally, leaving no visible external scars. At Personiks we prefer Closed Rhinoplasty to give a scarless result.',
+      },
+      {
+        question: 'Will rhinoplasty change my voice?',
+        answer:
+          'No. Rhinoplasty does not impact vocal cords or alter one’s voice. Our surgeons take care to preserve the structural integrity of the nose to maintain normal nasal functions.',
+      },
+      {
+        question: 'Can rhinoplasty change the size of nostrils?',
+        answer:
+          'Yes, rhinoplasty can alter the size and shape of nostrils. This can be achieved through techniques such as alar base reduction or adjustments to the nostril shape during surgery.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/02/Nose-Website-Icon-Before-and-After-1-1.jpg',
+  },
+  'vaginoplasty-labiaplasty': {
+    title:
+      'Tighten your Vagina and Correct Urine Leakage after delivery and reduce protruding labia',
+    subtitle: 'by Best Plastic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Vaginoplasty & labiaplasty Surgery',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'Arm Liposuction or Arm Tuck Surgery Cost in India varies from 1 lakh to 2.5 lakhs based on your aesthetic goals and surgery package you need',
+        'If you need Arm tuck in addition to Arm Liposuction the cost will be higher, because Arm Tuck also involves skin excision to tighten the skin ',
+        'Personiks has affordable arm liposuction and arm tuck price packages that combine arms liposuction with arm tuck and bra bulge removal for your shirt or blouses to fit perfectly',
+        'The quotation given at Personiks has no hidden costs',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'What is Vaginoplasty?',
+        answer:
+          'Vaginoplasty is a surgical procedure aimed at tightening the vaginal muscles and tissues that may become loose due to childbirth or aging. It helps improve vaginal tone, strength, and overall function.',
+      },
+      {
+        question: 'What is Labiaplasty?',
+        answer:
+          'Labiaplasty is a cosmetic surgery that reshapes or reduces the size of the labia minora or labia majora. It is performed for aesthetic reasons, comfort, or to correct asymmetry or irritation caused by enlarged labia.',
+      },
+      {
+        question: 'How long do Vaginoplasty and Labiaplasty surgeries take?',
+        answer:
+          'Vaginoplasty typically takes about 1 to 2 hours, and labiaplasty takes around 45 minutes to 1 hour. Both can be performed as outpatient procedures under local anesthesia with sedation or general anesthesia.',
+      },
+      {
+        question: 'Is the recovery painful after these surgeries?',
+        answer:
+          'Some discomfort, swelling, and mild pain are expected, especially in the first few days. Pain is manageable with prescribed medications, and most patients resume light activities within a week.',
+      },
+      {
+        question: 'When can I resume normal activities, including intimacy?',
+        answer:
+          'Most patients can return to non-strenuous work in about 5 to 7 days. Intimate activity should be avoided for 6 to 8 weeks or until cleared by the surgeon to ensure proper healing.',
+      },
+      {
+        question: 'Are the results permanent?',
+        answer:
+          'Yes, the results are long-lasting. However, factors like aging, future childbirth, or hormonal changes may affect the outcomes over time.',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/01/vaginoplasty.png.webp',
+  },
+  'butt-lift-and-hips-liposuction': {
+    title: 'Butt Liposuction and Hip Liposuction Cost',
+    subtitle: 'by Best Plastic Surgeon in Hyderabad',
+
+    features: [
+      {
+        img: '/assets/natural-icon.png',
+        title: 'Immediate and Natural Results',
+      },
+      {
+        img: '/assets/patient-icon.png',
+        title: 'Painless and Scarless Procedure',
+      },
+      { img: '/assets/advance-tech.png', title: 'Most Advanced Technologies' },
+      { img: '/assets/doctor-icon.png', title: 'Board Certified Surgeons' },
+    ],
+
+    procedureInfo: {
+      coloredTitle: 'Butt Liposuction and Hip Liposuction',
+      title: 'Cost in Hyderabad',
+      bulletPoints: [
+        'Butt Liposuction or Hips Liposuction Cost in India varies. Butt liposuction cost varies from 80K to 1.5 Lakhs. Brazilian Butt Lift costs approximately 1.25 to 1.5 lakhs',
+        'If you need Thigh liposuction in addition to butt liposuction the cost will be higher',
+        'Personiks has affordable buttock liposuction and hips liposuction price packages ',
+        'TThe quotation given at Personiks has no hidden costs',
+      ],
+    },
+
+    faqs: [
+      {
+        question: 'Consultation',
+        answer:
+          'Consult with a Board Certified Cosmetic Surgeon . Get a personalized treatment plan e.g. combine buttock & hips liposuction with, thigh liposuction, tummy 360 liposuction, or CO2 Lasers for stretch marks removal. Get an transparent buttock liposuction or hips liposuction cost or brazilian butt lift (BBL) cost surgery package cost estimate ',
+      },
+      {
+        question: 'Surgery',
+        answer:
+          'Complete the surgeon prescribed pre-surgical blood test and other investigations .Buttocks fat removal or hips fat or Brazilian Butt Lift removal is done by our skilled board certified plastic surgeon. You will stay at the center for some time for observation with same day discharge',
+      },
+      {
+        question: 'Back to Routine',
+        answer:
+          'The recovery time for butt liposuction or hips liposuction is 4 to 7 days. Followup appointment after 5-7 days to check healing .Personiks also provides ultrasonic massages for faster recovery as recommended by the surgeon .You can get back to your heavy workout or gym sessions after 20 to 30 days, until then you can do light activities',
+      },
+    ],
+
+    beforeAfterImage:
+      'https://personiks.com/wp-content/uploads/2024/02/Website-Icon-Before-and-After-1.jpg',
+  },
+};
 export default pageData;
