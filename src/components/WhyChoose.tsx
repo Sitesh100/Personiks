@@ -31,7 +31,7 @@ const ComparisonTable = () => {
   ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto font-sans rounded-lg overflow-hidden shadow-lg">
+    <div className="w-full max-w-7xl mx-auto font-sans rounded-lg overflow-hidden shadow-lg">
       {/* Header */}
       <div
         className="grid grid-cols-3 text-black font-semibold"
@@ -56,17 +56,17 @@ const ComparisonTable = () => {
             background: '#D4AF37',
           }}
         >
-          <div className="p-6 text-xl font-medium flex items-center">
+          <div className="p-6 text-[25px] font-medium flex items-center">
             {row.category}
           </div>
-          <div className="p-6 text-xl flex items-center justify-center relative">
+          <div className="p-6 text-[25px] flex items-center justify-center relative">
             {/* Divider line */}
-            <div className="absolute left-0 top-4 bottom-4 w-px bg-black opacity-20"></div>
+            <div className="absolute left-0 top-4 bottom-4 w-px bg-black "></div>
             {row.otherClinics}
             {/* Divider line */}
-            <div className="absolute right-0 top-4 bottom-4 w-px bg-black opacity-20"></div>
+            <div className="absolute right-0 top-4 bottom-4 w-px bg-black"></div>
           </div>
-          <div className="p-6 text-xl flex items-center justify-center">
+          <div className="p-6 text-[25px] flex items-center justify-center">
             {row.personiks}
           </div>
         </div>
@@ -95,7 +95,7 @@ const featureCards = [
 
 const WhyChoose = () => {
   return (
-    <section className="bg-[#111111] text-white w-full px-4 sm:px-6 md:px-8 lg:px-16 py-10 md:py-[60px]">
+    <section className="bg-[#171717] text-white w-full px-4 sm:px-6 md:px-8 lg:px-16 py-10 md:py-[60px]">
       <div className="max-w-[1439px] mx-auto flex flex-col gap-8 md:gap-[57px]">
         {/* Header */}
         <div className="relative inline-block mb-2 md:mb-5">
@@ -110,7 +110,7 @@ const WhyChoose = () => {
           {featureCards.map((item, index) => (
             <div
               key={index}
-              className="bg-black border border-white rounded-lg w-full max-w-[400px] h-auto min-h-[180px] px-4 sm:px-6 py-8 text-center relative group"
+              className="bg-[#171717] border border-white rounded-lg w-full max-w-[400px] h-auto min-h-[180px] px-4 sm:px-6 py-8 text-center relative group"
             >
               <div className="flex justify-center mb-4 absolute w-[80px] sm:w-[105px] h-[60px] sm:h-[80px] top-[-25px] sm:top-[-30px] left-1/2 transform -translate-x-1/2">
                 <Image

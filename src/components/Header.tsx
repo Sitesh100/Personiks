@@ -61,7 +61,7 @@ const navItems: NavItem[] = [
             name: 'Thigh or Calf Liposuction',
             href: '/thigh-liposuction-and-calf-liposuction',
           },
-          { name: 'HD Liposuction', href: '/hd-liposuction' },
+          { name: 'HD Liposuction', href: '/hd-liposuction-treatment' },
           {
             name: 'Butt & Hips Liposuction or Butt Lift',
             href: '/butt-hips-liposuction',
