@@ -128,7 +128,7 @@ export default function ClientExperiences() {
   }, [nextSlide]);
 
   return (
-    <section className="w-full flex flex-col items-center bg-[#171717] py-10">
+    <section className="w-full flex flex-col items-center bg-[#171717] py-10 px-3 md:px-0">
       <div className="w-full max-w-[1365px]">
         <div className="flex justify-between items-center mb-10">
           <div className="relative inline-block mb-5">

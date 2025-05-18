@@ -4,9 +4,9 @@ import type React from 'react';
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Header from '../Header';
+import Header from '@/components/Header';
 import Image from 'next/image';
-import Footer from '../Footer';
+import Footer from '@/components/Footer';
 
 interface FeatureCard {
   img: string;

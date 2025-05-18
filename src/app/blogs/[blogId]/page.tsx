@@ -1,7 +1,25 @@
-import React from 'react';
+// app/blogs/[blogId]/page.tsx
+import { notFound } from 'next/navigation';
+import { blogData } from '@/utils/blog.data';
+import ProfessionalBlogPage from '@/components/blogs/ProfessionalBlogPage';
 
-const page = () => {
-  return <div>page</div>;
-};
+export async function generateStaticParams() {
+  return Object.keys(blogData).map((blogId) => ({
+    blogId,
+  }));
+}
 
-export default page;
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ blogId: string }>;
+}) {
+  const { blogId } = await params; // Await params to resolve the Promise
+  const data = blogData[blogId];
+
+  if (!data) {
+    notFound();
+  }
+
+  return <ProfessionalBlogPage blogData={data} />;
+}

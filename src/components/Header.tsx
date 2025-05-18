@@ -350,7 +350,7 @@ export default function Header() {
         {/* Contact Button (Desktop) */}
         <Link
           href="/blogs"
-          className="hidden lg:flex items-center justify-center text-gray-700 hover:text-[#BFA14A] hover:bg-[#F9E8D9] text-xl"
+          className="hidden lg:flex items-center font-semibold justify-center text-gray-700 hover:text-[#BFA14A] text-xl"
         >
           Blogs
         </Link>

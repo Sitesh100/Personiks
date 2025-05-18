@@ -39,9 +39,15 @@ const ComparisonTable = () => {
           background: '#D4AF37',
         }}
       >
-        <div className="p-6 text-2xl">Overall Points</div>
-        <div className="p-6 text-2xl text-center">Other Clinics</div>
-        <div className="p-6 text-2xl text-center">Personiks</div>
+        <div className="md:p-6 p-2 md:text-2xl text-lg font-semibold">
+          Overall Points
+        </div>
+        <div className="md:p-6 p-2 md:text-2xl text-center text-lg font-semibold">
+          Other Clinics
+        </div>
+        <div className="md:p-6 p-2 md:text-2xl text-center text-lg font-semibold">
+          Personiks
+        </div>
       </div>
 
       {/* Spacer */}
@@ -56,17 +62,17 @@ const ComparisonTable = () => {
             background: '#D4AF37',
           }}
         >
-          <div className="p-6 text-[25px] font-medium flex items-center">
+          <div className="md:p-6 p-2 md:text-[25px] font-medium flex items-center">
             {row.category}
           </div>
-          <div className="p-6 text-[25px] flex items-center justify-center relative">
+          <div className="md:p-6 p-2 md:text-[25px] flex items-center justify-center relative">
             {/* Divider line */}
             <div className="absolute left-0 top-4 bottom-4 w-px bg-black "></div>
             {row.otherClinics}
             {/* Divider line */}
             <div className="absolute right-0 top-4 bottom-4 w-px bg-black"></div>
           </div>
-          <div className="p-6 text-[25px] flex items-center justify-center">
+          <div className="md:p-6 p-2 md:text-[25px] flex items-center justify-center">
             {row.personiks}
           </div>
         </div>
