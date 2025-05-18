@@ -15,7 +15,8 @@ export async function generateMetadata({
   params,
   parent,
 }: GenerateMetadataProps): Promise<Metadata> {
-  const { blogId } = params;
+  // Await params to resolve the Promise
+  const { blogId } = await params;
   const post = blogData[blogId];
 
   if (!post) {
@@ -46,9 +47,9 @@ export async function generateMetadata({
   };
 }
 
-// Note: The export default function is what Next.js uses as the page component
-export default function BlogPage({ params }: BlogPageProps) {
-  const { blogId } = params;
+export default async function BlogPage({ params }: BlogPageProps) {
+  // Await params to resolve the Promise
+  const { blogId } = await params;
   const data = blogData[blogId];
 
   if (!data) {
