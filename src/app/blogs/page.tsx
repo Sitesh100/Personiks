@@ -1,5 +1,5 @@
 import Header from '@/components/Header';
-import BlogCard from '@/components/blogs/blogCard';
+import BlogCard from '@/components/blogs/BlogCard';
 import React from 'react';
 
 const BlogsPage = () => {
