@@ -154,19 +154,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookNow }) => {
       </div>
 
       <div className="absolute bottom-8 right-8 flex flex-col items-center gap-4 z-20">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all"
-        >
-          <Image
-            src="/assets/bot.png"
-            alt="Bot"
-            width={72}
-            height={72}
-            className="object-contain"
-          />
-        </motion.button>
+        <Link href="/workshop">
+          {' '}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className=" flex items-center justify-center hover:shadow-xl transition-all"
+          >
+            <Image
+              src="/assets/workshop.png"
+              alt="Bot"
+              width={72}
+              height={72}
+              className="object-contain text-[#E3B63A] "
+            />
+          </motion.button>
+          <p className="text-[#E3B63A] font-semibold">Workshop</p>
+        </Link>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

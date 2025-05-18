@@ -84,7 +84,7 @@ export default function Page() {
 
       {/* 1) HERO SECTION */}
       <section className="px-6 lg:px-10 py-16">
-        <div className="relative max-w-7xl rounded-2xl ml-20 overflow-hidden shadow-xl">
+        <div className="relative max-w-7xl rounded-2xl md:ml-20 overflow-hidden shadow-xl">
           <div
             className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-transparent"
             style={{ width: '65%', zIndex: 1 }}
@@ -140,12 +140,12 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 relative w-full h-64 lg:h-[500px]">
+            <div className="flex-1 relative w-full min-h-[256px] lg:h-[500px]">
               <Image
                 src="/assets/old desk doctor.png"
                 alt="Dr. Guru Karna Vemula"
                 fill
-                className="object-cover"
+                className="rounded-lg object-cover"
                 priority
               />
             </div>
@@ -200,7 +200,7 @@ export default function Page() {
       </section>
 
       {/* 3) SURGEON HIGHLIGHT */}
-      <section className="bg-black text-black py-20 px-6 lg:px-18">
+      <section className="bg-black text-black py-20 px-4 lg:px-18">
         <div className="bg-[#FDF3EB] h-[65vh] max-w-7xl mx-auto flex flex-col lg:flex-row gap-50 items-center rounded-2xl p-8 lg:pl-20 md:p-0 overflow-hidden">
           <div className="lg:w-3/5 ">
             <h2 className="text-3xl lg:text-4xl font-bold text-black mb-10">
@@ -224,27 +224,22 @@ export default function Page() {
               liposuction, fat grafting, and complex reconstructive surgeries.
             </p>
           </div>
-          <div className="lg:w-2/5 relative bg-[#FDF3EB] h-full flex items-end justify-center  self-stretch">
-            {/* Doctor image */}
-            <Image
-              src="/assets/old doctor.png"
-              alt="Dr. Vemula"
-              width={350}
-              height={500}
-              className="object-contain z-10 h-[100%]"
-              style={{
-                marginBottom: '0',
-                maxHeight: '100%',
-                objectFit: 'contain',
-                objectPosition: 'bottom',
-              }}
-            />
+          <div className="w-full lg:w-2/5 bg-[#FDF3EB] flex justify-center items-end relative">
+            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[65vh]">
+              <Image
+                src="/assets/old doctor.png"
+                alt="Doctor Image"
+                fill
+                className="object-contain z-10"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* 4) HIGHLIGHTS CAROUSEL */}
-      <section className="py-16 px-6 lg:px-20">
+      <section className="py-16 px-5 lg:px-20">
         <div className="max-w-[78rem] mx-auto">
           <div className="flex justify-between items-center mb-8">
             <h3 className="font-outfit text-2xl font-semibold text-white">
