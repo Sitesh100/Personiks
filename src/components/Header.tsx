@@ -350,7 +350,7 @@ export default function Header() {
         {/* Contact Button (Desktop) */}
         <Link
           href="/blogs"
-          className="hidden lg:flex items-center justify-center text-gray-700 hover:text-[#BFA14A] text-xl"
+          className="hidden lg:flex items-center hover:text-[#BFA14A] font-semibold justify-center text-gray-700 text-xl"
         >
           Blogs
         </Link>
@@ -530,7 +530,14 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              <Link href="/blogs">/blogs</Link>
+              <Link
+                href="/blogs"
+                className="w-full py-3 px-6 text-lg font-medium text-gray-700
+          hover:text-[#BFA14A] transition-colors text-left"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blogs
+              </Link>
               <Link
                 href="/about"
                 className="mt-4 flex items-center justify-center h-12 px-8
