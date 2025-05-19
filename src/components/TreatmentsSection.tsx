@@ -1,245 +1,261 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 
+// Treatments data from old code
 const treatments = [
   {
+    id: 1,
     title: 'Hair loss treatment',
     description:
       'Clinically proven expert solutions to restore fuller, healthier hair.',
-    img: '/assets/Treatment1.png', // Corrected path
-    backTitle: 'Hair loss Treatment',
-    backText:
-      'Our experts offer clinically backed, customized solutions to combat hair loss and restore natural hair growth - giving you fuller, healthier hair with lasting results.',
+    image: '/assets/Treatment1.png',
   },
   {
+    id: 2,
     title: 'Laser hair removal',
     description:
       'Long-lasting hair reduction with safe, advanced laser technology.',
-    img: '/assets/Treatment2.png', // Corrected path
-    backTitle: 'Laser hair removal',
-    backText:
-      'Experience smooth, hair-free skin with our safe and advanced laser technology - designed for long-lasting results and minimal discomfort.',
+    image: '/assets/Treatment2.png',
   },
   {
+    id: 3,
     title: 'Hair transplant',
     description:
       'Natural-looking hair restoration with minimally invasive techniques.',
-    img: '/assets/Treatment3.png', // Corrected path
-    backTitle: 'Hair transplant',
-    backText:
-      'Achieve fuller, natural-looking hair through our minimally invasive transplant techniques - ensuring effective, lasting restoration with expert care.',
+    image: '/assets/Treatment3.png',
   },
   {
+    id: 4,
     title: 'Scalp treatment',
     description:
       'Specialized care for scalp health and hair follicle stimulation.',
-    img: '/assets/Treatment4.png', // Corrected path
-    backTitle: 'Scalp treatment',
-    backText:
-      'Personalized scalp therapies to boost hair follicle health and support robust, natural hair growth for long-term results.',
+    image: '/assets/Treatment4.png',
   },
 ];
 
-const CARD_WIDTH = 360;
-const CARD_HEIGHT = 520;
-const CARD_GAP = 36;
-const VISIBLE_CARDS = 3;
-
-function FlipCard({
-  title,
-  description,
-  img,
-  backTitle,
-  backText,
-}: {
-  title: string;
-  description: string;
-  img: string;
-  backTitle: string;
-  backText: string;
-}) {
-  return (
-    <div className="group [perspective:1200px] w-[360px] h-[520px] flex-shrink-0">
-      <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        {/* Front */}
-        <div className="absolute w-full h-full bg-[#FFF8EE] rounded-[20px] shadow-lg flex flex-col items-start transition-all duration-300 cursor-pointer [backface-visibility:hidden] px-6 py-6">
-          <Image
-            src={img}
-            alt={title}
-            width={312}
-            height={160}
-            className="rounded-[16px] object-cover mb-6"
-            style={{
-              width: 312,
-              height: 160,
-              objectFit: 'cover',
-            }}
-          />
-          <h3
-            className="font-bold text-black text-[22px] mb-2 font-sans"
-            style={{ fontFamily: 'Outfit, sans-serif' }}
-          >
-            {title}
-          </h3>
-          <p
-            className="text-black text-[16px] mb-6 font-sans"
-            style={{ fontFamily: 'Outfit, sans-serif' }}
-          >
-            {description}
-          </p>
-          <button
-            className="bg-[#D4AF37] text-black rounded-[12px] font-semibold font-sans px-8 py-2 text-[16px] mt-auto transition hover:brightness-95"
-            style={{
-              fontFamily: 'Outfit, sans-serif',
-              minHeight: 40,
-              borderRadius: 12,
-            }}
-          >
-            Book now
-          </button>
-        </div>
-        {/* Back */}
-        <div className="absolute w-full h-full bg-black rounded-[20px] shadow-lg flex flex-col items-start justify-center [backface-visibility:hidden] [transform:rotateY(180deg)] px-6 py-6">
-          <h3
-            className="font-bold text-white text-[20px] mb-5 font-sans"
-            style={{ fontFamily: 'Outfit, sans-serif' }}
-          >
-            {backTitle}
-          </h3>
-          <p
-            className="text-white text-[15px] font-sans leading-[1.4]"
-            style={{ fontFamily: 'Outfit, sans-serif' }}
-          >
-            {backText}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function TreatmentsSection() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+const TreatmentsSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
   const [firstVisible, setFirstVisible] = useState(0);
+  const cardsContainerRef = useRef<HTMLDivElement>(null);
 
-  // Scroll to card at index
-  const scrollToCard = (idx: number) => {
-    const scrollElement = scrollRef.current;
-    if (!scrollElement) return;
-    const scrollAmount = idx * (CARD_WIDTH + CARD_GAP);
-    scrollElement.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
-  };
+  // Scroll to a specific card
+  const scrollToCard = useCallback(
+    (index: number) => {
+      if (!cardsContainerRef.current || !isMounted) return;
 
-  // Arrow click handlers
-  const handleLeft = () => {
-    if (firstVisible > 0) {
-      const newIdx = firstVisible - 1;
-      setFirstVisible(newIdx);
-      scrollToCard(newIdx);
+      const container = cardsContainerRef.current;
+      const cardWidth =
+        container.querySelector('.treatment-card')?.clientWidth || 0;
+      const gap = 16; // Gap between cards in pixels
+
+      const scrollPosition = index * (cardWidth + gap);
+
+      container.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth',
+      });
+
+      setActiveIndex(index);
+    },
+    [isMounted]
+  );
+
+  // Update firstVisible when scrolling
+  const handleScroll = useCallback(() => {
+    if (!cardsContainerRef.current || !isMounted) return;
+
+    const container = cardsContainerRef.current;
+    const scrollLeft = container.scrollLeft;
+    const cardWidth =
+      container.querySelector('.treatment-card')?.clientWidth || 0;
+    const gap = 16;
+
+    const newFirstVisible = Math.round(scrollLeft / (cardWidth + gap));
+
+    if (newFirstVisible !== firstVisible) {
+      setFirstVisible(newFirstVisible);
+      setActiveIndex(newFirstVisible);
     }
-  };
+  }, [firstVisible, isMounted]);
 
-  const handleRight = () => {
-    if (firstVisible < treatments.length - VISIBLE_CARDS) {
-      const newIdx = firstVisible + 1;
-      setFirstVisible(newIdx);
-      scrollToCard(newIdx);
-    }
-  };
-
-  // Keep state in sync with manual scroll (drag/trackpad)
-  const handleScroll = () => {
-    const scrollElement = scrollRef.current;
-    if (!scrollElement) return;
-    const scrollLeft = scrollElement.scrollLeft;
-    const idx = Math.round(scrollLeft / (CARD_WIDTH + CARD_GAP));
-    setFirstVisible(idx);
-  };
-
-  // On mount, scroll to the first card
+  // Add scroll event listener
   useEffect(() => {
-    scrollToCard(firstVisible);
-    // eslint-disable-next-line
-  }, []);
+    setIsMounted(true);
+
+    const container = cardsContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [handleScroll]);
+
+  // Handle resize to adjust visible cards
+  useEffect(() => {
+    const handleResize = () => {
+      if (!isMounted || !cardsContainerRef.current) return;
+      scrollToCard(firstVisible);
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
+    };
+  }, [isMounted, firstVisible, scrollToCard]);
+
+  // Determine how many cards to show based on screen size
+  const getVisibleCards = () => {
+    if (!isMounted) return 1;
+
+    if (typeof window !== 'undefined') {
+      const width = window.innerWidth;
+      if (width < 640) return 1; // Mobile
+      if (width < 1024) return 2; // Tablet
+      return 3; // Desktop
+    }
+
+    return 1; // Default for SSR
+  };
+
+  // Next button handler
+  const handleNext = () => {
+    const maxIndex = Math.max(0, treatments.length - getVisibleCards());
+    const nextIndex = Math.min(activeIndex + 1, maxIndex);
+    scrollToCard(nextIndex);
+  };
+
+  // Previous button handler
+  const handlePrev = () => {
+    const prevIndex = Math.max(0, activeIndex - 1);
+    scrollToCard(prevIndex);
+  };
 
   return (
-    <section
-      className="bg-[#181818] flex flex-col items-center w-full py-20 px-4 relative overflow-hidden"
-      style={{ minHeight: 650 }}
-    >
-      <div className="mx-auto" style={{ maxWidth: 1200, marginBottom: 32 }}>
-        <h2 className="font-outfit font-normal text-[48px] leading-[110%]">
-          <span className="text-white">Our </span>
-          <span style={{ color: '#D4AF37' }}>Treatments</span>
-        </h2>
-        <p className="font-outfit text-[#EAEAEA] text-[20px] font-light mt-2 leading-[120%]">
+    <section className="bg-[#181818] flex flex-col w-full py-16 px-4 relative overflow-hidden">
+      <div className="mb-12 md:ml-16 ml-1 ">
+        <div className="relative inline-block mb-5">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#f0d078] to-[#D9AC47]">
+            Our Treatments
+          </h2>
+          <div className="h-1 w-1/3 bg-gradient-to-r from-[#D9AC47] to-transparent mt-2 rounded-full animate-pulse"></div>
+        </div>
+
+        <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-10 font-light max-w-3xl leading-relaxed">
           Clinically backed solutions delivered with expert care.
         </p>
       </div>
 
-      <div
-        className="relative w-full max-w-[1200px] mx-auto flex items-center"
-        style={{ height: CARD_HEIGHT + 20, minWidth: 0 }}
-      >
-        {/* Left Arrow */}
+      <div className="relative w-full max-w-[80rem] mx-auto">
         <button
-          className={`absolute left-[-36px] top-1/2 -translate-y-1/2 bg-white text-[#181818] rounded-full flex justify-center items-center z-20 shadow-md border border-[#E5E5E5] transition-all duration-300 ${
-            firstVisible === 0
+          onClick={handlePrev}
+          disabled={activeIndex === 0}
+          className={`absolute left-0 sm:left-[-60px] top-1/2 -translate-y-1/2 bg-white/90 text-[#181818] rounded-full flex justify-center items-center z-20 shadow-lg border border-[#E5E5E5] transition-all duration-300 ${
+            activeIndex === 0
               ? 'opacity-50 cursor-not-allowed'
               : 'hover:scale-110'
           }`}
-          style={{ width: 48, height: 48, fontSize: 28 }}
-          onClick={handleLeft}
+          style={{ width: 48, height: 48, fontSize: 24 }}
           aria-label="Scroll left"
-          disabled={firstVisible === 0}
         >
-          &#8592;
+          ←
         </button>
 
-        {/* Cards Row */}
         <div
-          ref={scrollRef}
-          className="flex items-center overflow-x-auto scrollbar-hide w-full gap-[36px] px-2"
-          style={{
-            scrollBehavior: 'smooth',
-            height: CARD_HEIGHT + 20,
-            userSelect: 'none',
-            minWidth: 0,
-          }}
-          onScroll={handleScroll}
+          ref={cardsContainerRef}
+          className="flex gap-4 overflow-x-auto pb-8 snap-x scrollbar-hide"
+          style={{ scrollBehavior: 'smooth', scrollSnapType: 'x mandatory' }}
         >
-          {treatments.map((item, idx) => (
-            <FlipCard
-              key={idx}
-              title={item.title}
-              description={item.description}
-              img={item.img}
-              backTitle={item.backTitle}
-              backText={item.backText}
-            />
+          {treatments.map((treatment, index) => (
+            <div
+              key={treatment.id}
+              className="treatment-card flex-shrink-0 w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-16px)] bg-gradient-to-br from-[#FFF8EE] to-[#F8E9D5] rounded-[20px] shadow-xl overflow-hidden snap-start group"
+              style={{
+                scrollSnapAlign: 'start',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              }}
+            >
+              <div className="relative h-[160px] w-full overflow-hidden">
+                <Image
+                  src={treatment.image}
+                  alt={treatment.title}
+                  width={300}
+                  height={160}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  priority={index === 0}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="font-outfit font-bold text-black text-[22px] mb-3 tracking-tight">
+                  {treatment.title}
+                </h3>
+                <p className="font-outfit text-gray-800 text-[16px] mb-5 leading-relaxed">
+                  {treatment.description}
+                </p>
+                <button className="bg-gradient-to-r from-[#D4AF37] to-[#B8972E] text-black rounded-[12px] font-outfit font-semibold px-6 py-2 text-[16px] mt-auto transition hover:brightness-110 shadow-md">
+                  Book now
+                </button>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* Right Arrow */}
         <button
-          className={`absolute right-[-36px] top-1/2 -translate-y-1/2 bg-white text-[#181818] rounded-full flex justify-center items-center z-20 shadow-md border border-[#E5E5E5] transition-all duration-300 ${
-            firstVisible >= treatments.length - VISIBLE_CARDS
+          onClick={handleNext}
+          disabled={activeIndex >= treatments.length - getVisibleCards()}
+          className={`absolute right-0 sm:right-[-60px] top-1/2 -translate-y-1/2 bg-white/90 text-[#181818] rounded-full flex justify-center items-center z-20 shadow-lg border border-[#E5E5E5] transition-all duration-300 ${
+            activeIndex >= treatments.length - getVisibleCards()
               ? 'opacity-50 cursor-not-allowed'
               : 'hover:scale-110'
           }`}
-          style={{ width: 48, height: 48, fontSize: 28 }}
-          onClick={handleRight}
+          style={{ width: 48, height: 48, fontSize: 24 }}
           aria-label="Scroll right"
-          disabled={firstVisible >= treatments.length - VISIBLE_CARDS}
         >
-          &#8594;
+          →
         </button>
       </div>
+
+      {/* Indicator dots */}
+      <div className="flex justify-center gap-2 mt-6">
+        {Array.from({
+          length: Math.ceil(treatments.length / getVisibleCards()),
+        }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => scrollToCard(i * getVisibleCards())}
+            className={`w-3 h-3 rounded-full ${
+              i === Math.floor(activeIndex / getVisibleCards())
+                ? 'bg-[#D4AF37]'
+                : 'bg-gray-300'
+            }`}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
-}
+};
+
+export default TreatmentsSection;

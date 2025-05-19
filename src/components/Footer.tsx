@@ -11,7 +11,7 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-dark text-white pt-12 pb-6">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto md:px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Personiks</h3>

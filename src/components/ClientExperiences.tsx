@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import TestimonialCard from '@/components/TestimonialCard';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
@@ -127,15 +128,15 @@ export default function ClientExperiences() {
   }, [nextSlide]);
 
   return (
-    <section className="w-full flex flex-col items-center bg-[#171717] rounded-[20px] py-12 px-6 mt-14">
+    <section className="w-full flex flex-col items-center bg-[#171717] py-10 px-3 md:px-0">
       <div className="w-full max-w-[1365px]">
         <div className="flex justify-between items-center mb-10">
-          <h2
-            className="font-outfit text-[42px] md:text-[60px] leading-[1.1] text-white"
-            style={{ letterSpacing: 0 }}
-          >
-            Client Experiences
-          </h2>
+          <div className="relative inline-block mb-5">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#f0d078] to-[#D9AC47]">
+              Client Experiences
+            </h2>
+            <div className="h-1 w-1/3 bg-gradient-to-r from-[#D9AC47] to-transparent mt-2 rounded-full animate-pulse"></div>
+          </div>
 
           <div className="hidden md:flex items-center gap-4">
             <button
@@ -143,30 +144,14 @@ export default function ClientExperiences() {
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
               aria-label="Previous testimonials"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M15 6L9 12L15 18"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <ChevronLeft />
             </button>
             <button
               onClick={nextSlide}
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
               aria-label="Next testimonials"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M9 6L15 12L9 18"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <ChevronRight />
             </button>
           </div>
         </div>
