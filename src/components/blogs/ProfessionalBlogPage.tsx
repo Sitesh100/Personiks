@@ -12,6 +12,7 @@ import {
 import Image from 'next/image';
 import Footer from '../Footer';
 import type { BlogData } from '@/types/blog';
+import Link from 'next/link';
 
 interface ProfessionalBlogPageProps {
   blogData: BlogData;
@@ -196,7 +197,7 @@ const ProfessionalBlogPage: React.FC<ProfessionalBlogPageProps> = ({
                   key={index}
                   className="bg-[#1e1e1e] p-6 rounded-xl border border-[#2d2d2d] hover:border-[#D9AC47] transition-colors"
                 >
-                  <Quote className="text-[#D9AC47] text-2xl mb-4" />
+                  <Quote className="text-[#D9AC47] text-2xl mb-4 rotate-180" />
                   <p className="text-gray-300 italic mb-4">
                     {testimonial.content}
                   </p>
@@ -224,10 +225,12 @@ const ProfessionalBlogPage: React.FC<ProfessionalBlogPageProps> = ({
           <p className="text-black/90 mb-6 text-lg max-w-2xl mx-auto">
             {ctaData.description}
           </p>
-          <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a1a1a] transition-all flex items-center mx-auto">
-            {ctaData.buttonText}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </button>
+          <Link href="/register">
+            <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a1a1a] transition-all flex items-center mx-auto">
+              {ctaData.buttonText}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </button>
+          </Link>
         </section>
       </div>
       <div className="px-20">
